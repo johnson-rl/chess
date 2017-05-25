@@ -1,0 +1,22 @@
+{
+  "name": "masterchess",
+  "version": "1.0.0",
+  "description": "A jQuery based javascript library for parsing and displaying chess games. Currently takes FEN and PGN as inputs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnson-rl/jchess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnson-rl/jchess/issues"
+  },
+  "homepage": "https://github.com/johnson-rl/jchess#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+  }
+}
