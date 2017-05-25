@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johnson-rl/jchess.git"
+    "url": "git+https://github.com/johnson-rl/chess.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/johnson-rl/jchess/issues"
+    "url": "https://github.com/johnson-rl/chess/issues"
   },
-  "homepage": "https://github.com/johnson-rl/jchess#readme",
+  "homepage": "https://github.com/johnson-rl/chess#readme",
   "dependencies": {
     "express": "^4.15.3"
   }
