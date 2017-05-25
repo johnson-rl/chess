@@ -4,7 +4,8 @@
   "description": "A jQuery based javascript library for parsing and displaying chess games. Currently takes FEN and PGN as inputs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
