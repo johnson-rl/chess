@@ -277,7 +277,6 @@ jQuery.eachWithContext = function(context, object, callback) {
         this.game.body = this.game.body.replace(/^\d+\.+/, '');
         this.game.body = this.game.body.replace(/\s\d+[\.]+/g, ' ');
 
-        console.log(this.game.body)
         var moves = $.trim(this.game.body).split(/\s+/);
         // This must be a separate variable from i, since annotations don't
         // count as moves.
@@ -289,7 +288,6 @@ jQuery.eachWithContext = function(context, object, callback) {
           }
 
           this.game.moves[move_number] = move;
-          console.log(this.game.moves)
 
           var player = (move_number % 2 == 0) ? 'w' : 'b';
 
