@@ -34,3 +34,16 @@ h1 {
 .hidden {
   display: none;
 }
+
+.instructions {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.pgn-example {
+  width: 100%;
+}
+
+.fen-field, .pgn-field, .pgn-load {
+  color: black;
+}

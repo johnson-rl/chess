@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
   <title>MasterChess</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="./stylesheets/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="./stylesheets/chess.css" type="text/css" media="screen" title="no title" charset="utf-8">
   <script src="./javascripts/jquery-1.7.min.js" type="text/javascript"></script>
@@ -29,11 +30,31 @@
     <form class="pgn-form" action="">
       <textarea class="fen-field" rows="1" cols="80" name="fen" value="" placeholder="Paste FEN here"></textarea>
       <br>
-      <textarea class="pgn-field" rows="10" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
+      <textarea class="pgn-field" rows="6" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
       <br>
-      <button class="pgn-load" type="button" name="button">Load Game</button>
+      <button class="pgn-load btn btn-default" type="button" name="button">Load Game</button>
 
       <p>To see a sample game, press 'Load Game' with nothing in the inputs</p>
+
+      <h3>Instructions:</h3>
+      <div class="row">
+        <div class="col-xs-6 instructions">
+          <p>Not all PGNs will load.  The example below is broken for two reasons:</p>
+          <ol>
+            <li><p>The sections in parenthesis are alternative moves, which are not supported yet.</p></li>
+            <li><p>The number '5.' corresponds to the fifth turn.  It is then repeated below where the turn resumes.  It should only appear once.</p></li>
+          </ol>
+          <img class="pgn-example" src="./images/pgn-incorrect.png" alt="">
+        </div>
+        <div class="col-xs-6 instructions">
+          <p>This example has been reformatted to work properly.  To open it:</p>
+          <ol>
+            <li><p>The highlighted section is the FEN which should go in the first box.  If there is no FEN, leave the box blank.</p></li>
+            <li><p>The entire contents of the file can be pasted into the second box.  Then press the 'Load Game' button.</p></li>
+          </ol>
+          <img class="pgn-example" src="./images/pgn-correct.png" alt="">
+        </div>
+      </div>
     </form>
 
   </div>
