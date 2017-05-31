@@ -2,8 +2,8 @@
   margin: 0 auto;
   position: relative;
   background: transparent url(../images/half-board.png) repeat-y 0 0;
-  width: 650px;
-  height: 650px;
+  width: 624px;
+  height: 624px;
   background-size: 100% auto;
 }
 
@@ -16,17 +16,51 @@
 }
 
 .chess-board .wP {
-  background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -2px -4px;
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Pawn.png);
+  background-size: contain;
+ }
+.chess-board .wR {
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Rook.png);
+  background-size: contain;
 }
-.chess-board .wN { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -84px -4px; }
-.chess-board .wB { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -166px -4px; }
-.chess-board .wR { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -248px -4px; }
-.chess-board .wQ { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -329px -4px; }
-.chess-board .wK { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -411px -4px; }
+.chess-board .wN {
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Knight.png);
+  background-size: contain;
+}
+.chess-board .wB {
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Bishop.png);
+  background-size: contain;
+}
+.chess-board .wQ {
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Queen.png);
+  background-size: contain;
+}
+.chess-board .wK {
+  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_King.png);
+  background-size: contain;
+}
 
-.chess-board .bp { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -2px -87px; }
-.chess-board .bn { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -84px -87px; }
-.chess-board .bb { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -166px -87px; }
-.chess-board .br { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -248px -87px; }
-.chess-board .bq { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -329px -87px; }
-.chess-board .bk { background: transparent url(../images/chess-sets/GK_ChessboardGFX_v3.png) -411px -87px; }
+.chess-board .bp {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Pawn.png);
+  background-size: contain;
+}
+.chess-board .br {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Rook.png);
+  background-size: contain;
+}
+.chess-board .bn {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Knight.png);
+  background-size: contain;
+}
+.chess-board .bb {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Bishop.png);
+  background-size: contain;
+}
+.chess-board .bq {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Queen.png);
+  background-size: contain;
+}
+.chess-board .bk {
+  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_King.png);
+  background-size: contain;
+}

@@ -70,7 +70,7 @@ jQuery.eachWithContext = function(context, object, callback) {
 
     defaults : {
       fen : "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      square_size : 82,
+      square_size : 78,
       offsets : { left: 0, top: 0},
       board_element_selector : '.chess-board',
       json_annotations : false
