@@ -1,17 +1,17 @@
 .chess-board {
   margin: 0 auto;
   position: relative;
-  background: transparent url(../images/half-board.png) repeat-y 0 0;
-  width: 624px;
-  height: 624px;
+  background: transparent url(../images/GK_Chessboard.png) repeat-y 0 0;
+  width: 750px;
+  height: 750px;
   background-size: 100% auto;
 }
 
 .chess-board div {
   position: absolute;
   vertical-align: top;
-  width: 79px;
-  height: 79px;
+  width: 76px;
+  height: 76px;
   padding: 0; margin: 0;
 }
 
