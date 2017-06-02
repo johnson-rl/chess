@@ -270,8 +270,19 @@ jQuery.eachWithContext = function(context, object, callback) {
           this.game.header[headers[i]] = (result == null) ? "" : result[1];
         }
 
-        // Find the body
-        this.game.body = /([0-9]\. ?([KGRNBPkqrnbp][a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+        var turn = {
+          first: 'b',
+          second: 'w'
+        };
+
+        // Find the body if black is first
+        this.game.body = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+        // Find the body if white is first
+        if (!this.game.body){
+          this.game.body = /([0-9]\. ?([KQRNBPkqrnbp][a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+          turn.first = 'w';
+          turn.second = 'b'
+        }
         // Remove numbers, remove result
         this.game.body = this.game.body.replace(new RegExp("1-0|1/2-1/2|0-1"), '');
         this.game.body = this.game.body.replace(/^\d+\.+/, '');
@@ -286,10 +297,9 @@ jQuery.eachWithContext = function(context, object, callback) {
             this.game.annotations[move_number] = this.game.raw_annotations.shift();
             return;
           }
-
           this.game.moves[move_number] = move;
 
-          var player = (move_number % 2 == 0) ? 'w' : 'b';
+          var player = (move_number % 2 == 0) ? turn.first : turn.second;
 
           // If the move was to castle
           if ( this.patterns.castle_queenside.test(move) ) {
@@ -463,7 +473,7 @@ jQuery.eachWithContext = function(context, object, callback) {
       },
 
       findMoveSource : function(piece, src_file, src_rank, dst_file, dst_rank, player) {
-        //console.log("Looking for move source for " + piece + " from " + dst_rank + dst_file);
+        // console.log("Looking for move source for " + piece + " from " + dst_rank + dst_file);
         if ( src_file && src_rank ) return src_file + src_rank;
 
         var dst_square = dst_file + dst_rank;
@@ -543,7 +553,6 @@ jQuery.eachWithContext = function(context, object, callback) {
       // Ex: this.movePiece({from : 'e2', to : 'e4'})
       movePiece : function(num, move) {
         // console.log("Moving a piece: (" + num + ") " + " from " + move.from + " to " + move.to);
-        console.log(num, move)
         var from = this.algebraic2Coord(move.from);
         var to   = this.algebraic2Coord(move.to);
         var piece = this.pieceAt(move.from);

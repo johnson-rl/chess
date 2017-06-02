@@ -32,13 +32,13 @@ jQuery(function($) {
     $('.ctrl-buttons').removeClass('hidden');
     $('.pgn-form').addClass('hidden');
 
-    let currentPgn = $('.pgn-field').val().replace(/\(/g,'{').replace(/\)/g,'}').replace('*','')
-    console.log(currentPgn)
+    var currentPgn = $('.pgn-field').val().replace(/\(/g,'{').replace(/\)/g,'}').replace('*','')
+    var currentFEN=currentPgn.substring(currentPgn.lastIndexOf("[FEN")+4,currentPgn.lastIndexOf("]")).replace(/"/g,'');
 
     loadChessGame(
       '#game3',
       {
-        fen: String($('.fen-field').val()) || defaultFen,
+        fen: currentFEN || defaultFen,
         pgn : currentPgn || defaultPgn
       }
     );
