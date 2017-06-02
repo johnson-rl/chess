@@ -29,33 +29,10 @@
     </div>
 
     <form class="pgn-form" action="">
-      <textarea class="fen-field" rows="1" cols="80" name="fen" value="" placeholder="Paste FEN here"></textarea>
       <br>
       <textarea class="pgn-field" rows="6" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
       <br>
       <button class="pgn-load btn btn-default" type="button" name="button">Load Game</button>
-
-      <p>To see a sample game, press 'Load Game' with nothing in the inputs</p>
-
-      <h3>Instructions:</h3>
-      <div class="row">
-        <div class="col-xs-6 instructions">
-          <p>Not all PGNs will load.  The example below is broken for two reasons:</p>
-          <ol>
-            <li><p>The sections in parenthesis are alternative moves, which are not supported yet.</p></li>
-            <li><p>The number '5.' corresponds to the fifth turn.  It is then repeated below where the turn resumes.  It should only appear once.</p></li>
-          </ol>
-          <img class="pgn-example" src="./images/pgn-incorrect.png" alt="">
-        </div>
-        <div class="col-xs-6 instructions">
-          <p>This example has been reformatted to work properly.  To open it:</p>
-          <ol>
-            <li><p>The highlighted section is the FEN which should go in the first box.  If there is no FEN, leave the box blank.</p></li>
-            <li><p>The entire contents of the file can be pasted into the second box.  Then press the 'Load Game' button.</p></li>
-          </ol>
-          <img class="pgn-example" src="./images/pgn-correct.png" alt="">
-        </div>
-      </div>
     </form>
 
   </div>

@@ -45,5 +45,6 @@ h1 {
 }
 
 .fen-field, .pgn-field, .pgn-load {
-  color: black;
+  margin: 30px;
+
 }
