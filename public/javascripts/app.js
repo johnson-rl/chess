@@ -32,11 +32,14 @@ jQuery(function($) {
     $('.ctrl-buttons').removeClass('hidden');
     $('.pgn-form').addClass('hidden');
 
+    let currentPgn = $('.pgn-field').val().replace(/\(/g,'{').replace(/\)/g,'}').replace('*','')
+    console.log(currentPgn)
+
     loadChessGame(
       '#game3',
       {
         fen: String($('.fen-field').val()) || defaultFen,
-        pgn : String($('.pgn-field').val()) || defaultPgn
+        pgn : currentPgn || defaultPgn
       }
     );
 
