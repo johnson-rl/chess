@@ -16,51 +16,51 @@
 }
 
 .chess-board .wP {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Pawn.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_Pawn_v6.png);
   background-size: contain;
  }
 .chess-board .wR {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Rook.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_Rook_v6.png);
   background-size: contain;
 }
 .chess-board .wN {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Knight.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_Knight_v6.png);
   background-size: contain;
 }
 .chess-board .wB {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Bishop.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_Bishop_v6.png);
   background-size: contain;
 }
 .chess-board .wQ {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_Queen.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_Queen_v6.png);
   background-size: contain;
 }
 .chess-board .wK {
-  background: transparent url(../images/chess-sets/white/GK_ChessPiece_White_King.png);
+  background: transparent url(../images/chess-sets/white/GK_ChessPieceW_King_v6.png);
   background-size: contain;
 }
 
 .chess-board .bp {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Pawn.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_Pawn_v6.png);
   background-size: contain;
 }
 .chess-board .br {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Rook.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_Rook_v6.png);
   background-size: contain;
 }
 .chess-board .bn {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Knight.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_Knight_v6.png);
   background-size: contain;
 }
 .chess-board .bb {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Bishop.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_Bishop_v6.png);
   background-size: contain;
 }
 .chess-board .bq {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_Queen.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_Queen_v6.png);
   background-size: contain;
 }
 .chess-board .bk {
-  background: transparent url(../images/chess-sets/black/GK_ChessPiece_Black_King.png);
+  background: transparent url(../images/chess-sets/black/GK_ChessPieceB_King_v6.png);
   background-size: contain;
 }
