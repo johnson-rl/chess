@@ -276,13 +276,17 @@ jQuery.eachWithContext = function(context, object, callback) {
         };
 
         // Find the body if black is first
-        this.game.body = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+        let parsedPgn = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn);
+        if (parsedPgn && parsedPgn.length > 0){
+          this.game.body = parsedPgn[1]
+        }
         // Find the body if white is first
         if (!this.game.body){
-          this.game.body = /([0-9]\. ?([KQRNBPkqrnbp][a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+          this.game.body = /([0-9]\. ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
           turn.first = 'w';
           turn.second = 'b'
         }
+        console.log(this.game.body)
         // Remove numbers, remove result
         this.game.body = this.game.body.replace(new RegExp("1-0|1/2-1/2|0-1"), '');
         this.game.body = this.game.body.replace(/^\d+\.+/, '');
