@@ -1,7 +1,22 @@
+
 jQuery(function($) {
+
+  window._wq = window._wq || [];
 
   function loadChessGame(container, options, callback) {
     var chess = $('.board', container).chess(options);
+
+    _wq.push({ id: "1c8q2l4nvy", onReady: function(video) {
+      console.log("I got a handle to the video!", video);
+      video.bind("timechange", function(t) {
+        console.log("the time changed to " + t);
+        let current = 16.1
+        if (t>=current){
+          chess.transitionForward();
+          current += 3
+        }
+      });
+    }});
 
     $('.back', container).click(function() {
       chess.transitionBackward();
