@@ -6,14 +6,15 @@ jQuery(function($) {
   function loadChessGame(container, options, callback) {
     var chess = $('.board', container).chess(options);
 
-    _wq.push({ id: "1c8q2l4nvy", onReady: function(video) {
+    _wq.push({ id: "6qsebhq6qg", onReady: function(video) {
       console.log("I got a handle to the video!", video);
+      let i = 0
+      let time = [305.17, 308.03, 331.2, 347.17, 356.06, 358.06, 371.05, 372.02, 372.2, 373.2]
       video.bind("timechange", function(t) {
-        console.log("the time changed to " + t);
-        let current = 16.1
-        if (t>=current){
+        console.log("the time changed to " + t, time[i]);
+        if (t>=time[i]){
           chess.transitionForward();
-          current += 3
+          i++
         }
       });
     }});
