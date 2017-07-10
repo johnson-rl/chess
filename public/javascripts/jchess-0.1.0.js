@@ -276,14 +276,14 @@ jQuery.eachWithContext = function(context, object, callback) {
         };
 
         if (pgn.indexOf('.') === pgn.indexOf('...')) {
-          this.game.body = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1]
+          this.game.body = /([0-9][0-9]?\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1]
           turn.first = 'b';
           turn.second = 'w'
         } else {
-          this.game.body = /([0-9]\. ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
+          this.game.body = /([0-9][0-9]?\. ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
         }
 
-        // console.log(this.game.body)
+        console.log(this.game.body)
 
         // Remove numbers, remove result
         this.game.body = this.game.body.replace(new RegExp("1-0|1/2-1/2|0-1"), '');
@@ -630,6 +630,7 @@ jQuery.eachWithContext = function(context, object, callback) {
       /* Utility Functions */
       algebraic2Coord : function(algebraic) {
         // debugger
+        console.log(algebraic)
         return [this.rank2Row(algebraic.substr(1, 1)), this.file2Col(algebraic.substr(0, 1))];
       },
 
