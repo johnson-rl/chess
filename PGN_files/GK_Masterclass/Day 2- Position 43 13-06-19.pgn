@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "R7/8/8/5K2/4r2r/8/4kPP1/8 w - - 0 67"]
+
+67.g3 Rhg4 
+    ( 67...Kxf2 68.gxh4 Rxh4 )
+68.f4 
+    {king attacks both rooks}
+68...Kf3 
+    ( 68...Rxg3 69.Kxe4 )
+69.Ra3+ *
+

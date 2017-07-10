@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/p4K2/P7/8/8/8/1k6/8 w - - 1 24"]
+
+24.Ke6 
+    ( 24.Ke7 Kc3 25.Kd7 Kd4 26.Kc7 Kc5 27.Kb7 Kd6 28.Kxa7 Kc7 {draw} )
+24...Kc3 25.Kd5 Kd3 26.Kc6 Kd4 27.Kb7 Kc5 28.Kxa7 Kc6 29.Kb8 *
+

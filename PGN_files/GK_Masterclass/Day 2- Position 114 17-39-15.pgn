@@ -1,0 +1,15 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"]
+
+1.e4 c5 
+    ( 1...e6 )
+    ( 1...c6 )
+    ( 1...g6 )
+*
+

@@ -9,7 +9,7 @@ jQuery(function($) {
     _wq.push({ id: "6qsebhq6qg", onReady: function(video) {
       console.log("I got a handle to the video!", video);
       let i = 0
-      let time = [305.17, 308.03, 331.2, 347.17, 356.06, 358.06, 371.05, 372.02, 372.2, 373.2]
+      let time = [300.5, 305.17, 308.03, 331.2, 347.17, 356.06, 358.06, 371.05, 372.02, 372.2, 373.2]
       video.bind("timechange", function(t) {
         console.log("the time changed to " + t, time[i]);
         if (t>=time[i]){

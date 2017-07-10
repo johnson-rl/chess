@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "2k5/8/8/7p/8/8/6P1/5K2 w - - 3 41"]
+
+41.Kf2 h4 42.Kg1 
+    ( 42.Kf3 h3 43.g4 Kd7 44.Kg3 Ke7 45.Kxh3 Kf6 )
+42...h3 43.g3 Kd7 44.Kh2 Ke6 45.Kxh3 Kf5 46.Kh4 Kg6 47.Kg4 *
+

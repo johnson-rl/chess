@@ -271,28 +271,27 @@ jQuery.eachWithContext = function(context, object, callback) {
         }
 
         var turn = {
-          first: 'b',
-          second: 'w'
+          first: 'w',
+          second: 'b'
         };
 
-        // Find the body if black is first
-        let parsedPgn = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn);
-        if (parsedPgn && parsedPgn.length > 0){
-          this.game.body = parsedPgn[1]
-        }
-        // Find the body if white is first
-        if (!this.game.body){
+        if (pgn.indexOf('.') === pgn.indexOf('...')) {
+          this.game.body = /([0-9]\... ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1]
+          turn.first = 'b';
+          turn.second = 'w'
+        } else {
           this.game.body = /([0-9]\. ?([KQRNBPkqrnbp]x?[a-h][1-8]|[a-h][1-8]).*)/m.exec(pgn)[1];
-          turn.first = 'w';
-          turn.second = 'b'
         }
-        console.log(this.game.body)
+
+        // console.log(this.game.body)
+
         // Remove numbers, remove result
         this.game.body = this.game.body.replace(new RegExp("1-0|1/2-1/2|0-1"), '');
         this.game.body = this.game.body.replace(/^\d+\.+/, '');
         this.game.body = this.game.body.replace(/\s\d+[\.]+/g, ' ');
 
         var moves = $.trim(this.game.body).split(/\s+/);
+        console.log('moves',moves)
         // This must be a separate variable from i, since annotations don't
         // count as moves.
         var move_number = 0;
@@ -304,7 +303,7 @@ jQuery.eachWithContext = function(context, object, callback) {
           this.game.moves[move_number] = move;
 
           var player = (move_number % 2 == 0) ? turn.first : turn.second;
-
+          console.log('move',move,player)
           // If the move was to castle
           if ( this.patterns.castle_queenside.test(move) ) {
             var rank = (player == 'w') ? 1 : 8;
