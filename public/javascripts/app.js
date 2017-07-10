@@ -28,10 +28,12 @@ jQuery(function($) {
     $('.ctrl-buttons').removeClass('hidden');
     $('.pgn-form').addClass('hidden');
 
-    var currentPgn = $('.pgn-field').val().replace(/\(/g,'{').replace(/\)/g,'}').replace('*','')
-    var currentFEN = currentPgn.substring(currentPgn.lastIndexOf("[FEN")+4,currentPgn.lastIndexOf("]")).replace(/"/g,'');
+    var scrubbedPgn = $('.pgn-field').val().replace(/\(/g,'{').replace(/\)/g,'}').replace('*','')
+    var parsedPgn = scrubbedPgn.substring(scrubbedPgn.lastIndexOf("]") + 1, (scrubbedPgn.length -1) )
+    console.log(parsedPgn)
+    var currentFEN = scrubbedPgn.substring(scrubbedPgn.lastIndexOf("[FEN")+4,scrubbedPgn.lastIndexOf("]")).replace(/"/g,'');
 
-    loadChessGame('#game3', { fen: currentFEN, pgn : currentPgn });
+    loadChessGame('#game3', { fen: currentFEN, pgn : parsedPgn });
 
   });
 
