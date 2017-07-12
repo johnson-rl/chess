@@ -1,0 +1,18 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/8/8/5p2/8/3R4/P7/1k1K1N1r w - - 0 3"]
+
+3.a3 
+    ( 3.Ke2 Kxa2 )
+3...Rxf1+ 4.Ke2 Rf4 
+    ( 4...Rh1 5.Rd1+ Rxd1 6.Kxd1 )
+5.Rb3+ Kc2 6.Rb4 Re4+ 
+    ( 6...Rxb4 7.axb4 )
+    ( 6...Rg4 7.Rxg4 fxg4 8.a4 )
+7.Rxe4 fxe4 8.a4 *
+

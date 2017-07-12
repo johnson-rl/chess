@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/johnson-rl/chess#readme",
   "dependencies": {
-    "@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",
+    /*"@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",*/
+    "body-parser": "^1.17.2",
     "express": "^4.15.3"
   }
 }

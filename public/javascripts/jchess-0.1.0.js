@@ -247,6 +247,7 @@ jQuery.eachWithContext = function(context, object, callback) {
             new_board[j][k] = row.substr(k, 1);
           }
         }
+        console.log(new_board)
         return new_board;
       },
 
@@ -631,7 +632,7 @@ jQuery.eachWithContext = function(context, object, callback) {
       /* Utility Functions */
       algebraic2Coord : function(algebraic) {
         // debugger
-        console.log(algebraic)
+        // console.log(algebraic)
         return [this.rank2Row(algebraic.substr(1, 1)), this.file2Col(algebraic.substr(0, 1))];
       },
 
