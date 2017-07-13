@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/johnson-rl/chess#readme",
   "dependencies": {
-    /*"@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",*/
+    "@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "pg": "^6.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.3.2"
   }
 }
