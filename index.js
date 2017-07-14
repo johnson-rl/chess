@@ -5,10 +5,10 @@ const express = require('express'),
   readline = require('readline'),
   http = require('http'),
   models = require('./server/models'),
-  DB = require("./server/models");
-
-
-
+  DB = require('./server/models'),
+  Event = DB.Event,
+  Video = DB.Video,
+  Pgn = DB.Pgn;
 
 function onError(error) { console.log('server error') }
 function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
@@ -48,5 +48,12 @@ app.get('/api/pgns/:id', (req, res)=>{
   })
   pgnReader.on('close', ()=>{
     res.send(response)
+  })
+})
+
+app.post('/api/pgns', (req, res)=>{
+  Pgn.create(req.body).then((data, err)=>{
+    if(err){console.log(err)}
+    res.json(data)
   })
 })
