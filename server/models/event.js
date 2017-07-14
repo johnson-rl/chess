@@ -6,8 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Event.belongsTo(models.Pgn, {as: 'pgn'});
-        Event.belongsTo(models.Video, {as: 'video'});
+        Event.belongsTo(models.Video, {as: 'event'});
       }
     }
   });
