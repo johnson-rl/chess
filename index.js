@@ -5,10 +5,9 @@ const express = require('express'),
   readline = require('readline'),
   http = require('http'),
   models = require('./server/models'),
-  DB = require('./server/models'),
-  Event = DB.Event,
-  Video = DB.Video,
-  Pgn = DB.Pgn;
+  Event = models.Event,
+  Video = models.Video,
+  Pgn = models.Pgn;
 
 function onError(error) { console.log('server error') }
 function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
@@ -105,11 +104,15 @@ app.post('/api/videos/:video_id/pgns/:pgn_id/events', (req, res)=>{
     if(err){console.log(err)}
     Pgn.findById(req.params.pgn_id).then((pgn, err)=>{
       if(err){console.log(err)}
-      Video.findbyId(req.params.video).then((video, err)=>{
-        event.addPgn(pgn)
+      Video.findById(req.params.video_id).then((video, err)=>{
+        console.log(pgn)
+        // event.addPgns(pgn)
+        pgn.addEvent(event)
         video.addEvent(event)
-        event.save()
+        // event.addVideo(video)
+        pgn.save()
         video.save()
+        event.save()
         res.json(event)
       })
     })
@@ -118,31 +121,40 @@ app.post('/api/videos/:video_id/pgns/:pgn_id/events', (req, res)=>{
 
 // Update an Event
 app.put('/api/events/:id', (req, res)=>{
-  Event.findById(req.params.id).then(event, err)=>{
+  Event.findById(req.params.id).then((event, err)=>{
     if(err){console.log(err)}
     event.update(req.body)
     res.json(event)
-  }
+  })
 })
 
 // Delete an event
 app.delete('/api/events/:id', (req, res)=>{
-  Event.findById(req.params.id).then(event, err)=>{
+  Event.findById(req.params.id).then((event, err)=>{
     if(err){console.log(err)}
     event.destroy()
     res.json(event)
-  }
+  })
+})
+
+// Get one of the events
+app.get('/api/events/:id', (req, res)=>{
+  Event.findById(req.params.id).then((video, err)=>{
+    if(err){console.log(err)}
+    res.json(video)
+  })
 })
 
 // Get all events and pgns for a video
 app.get('/api/all/:id', (req, res)=>{
   Video.findById(req.params.id).then((video, err)=>{
     if(err){console.log(err)}
-    Video.getEvents({ include: { model: Pgn, as 'pgn' } }).then((events, err)=>{
+    Event.findAll({ where: { VideoId: req.params.id } }).then((events, err)=>{
       if(err){console.log(err)}
-      let data;
-      data['video'] = video;
-      data['events'] = events;
+      let data = {
+        video: video,
+        events: events
+      }
       res.json(data)
     })
   })

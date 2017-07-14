@@ -2,7 +2,7 @@
   "development": {
     "username": null,
     "password": null,
-    "database": "chess_dev",
+    "database": "chess_develop",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

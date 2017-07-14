@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Video.hasMany(models.Event, {as:'events'})
+        Video.hasMany(models.Event, {as: 'events'})
       }
     }
   });

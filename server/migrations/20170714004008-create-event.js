@@ -24,6 +24,22 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      VideoId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Videos',
+          key: 'id',
+          as: 'VideoId',
+        }
+      },
+      PgnId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Pgns',
+          key: 'id',
+          as: 'PgnId',
+        }
       }
     });
   },
