@@ -11,7 +11,7 @@ const express = require('express'),
 
 
 function onError(error) { console.log('server error') }
-function onListening() { console.log('you are now listening on', (process.env.PORT || 9000)) }
+function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
 
 app.use(bodyParser.urlencoded({
   extended : true
@@ -22,7 +22,7 @@ app.use(express.static('public'));
 const server = require('http').createServer(app);
 
 models.sequelize.sync().then(function () {
-  server.listen(process.env.PORT || 9000);
+  server.listen(process.env.PORT || 3000);
   server.on('error', onError);
   server.on('listening', onListening);
 });
@@ -50,8 +50,3 @@ app.get('/api/pgns/:id', (req, res)=>{
     res.send(response)
   })
 })
-
-// app.listen(process.env.PORT || 3000, function(){
-//
-//   console.log('express server online on port', 3000)
-// });
