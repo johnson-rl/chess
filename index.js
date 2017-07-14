@@ -34,26 +34,116 @@ app.get('/', function(req, res){
   });
 });
 
-app.get('/api/pgns/:id', (req, res)=>{
-  let pgnReader = readline.createInterface({
-    input: fs.createReadStream(`./public/javascripts/${req.params.id}`)
-  })
-  let response = []
-  pgnReader.on('line', (line)=>{
-    let game = {}
-    let lineArray = line.split('~')
-    game['pgn'] = lineArray[0]
-    game['events'] = lineArray[1].split(',')
-    response.push(game)
-  })
-  pgnReader.on('close', ()=>{
-    res.send(response)
-  })
-})
+// app.get('/api/pgns/:id', (req, res)=>{
+//   let pgnReader = readline.createInterface({
+//     input: fs.createReadStream(`./public/javascripts/${req.params.id}`)
+//   })
+//   let response = []
+//   pgnReader.on('line', (line)=>{
+//     let game = {}
+//     let lineArray = line.split('~')
+//     game['pgn'] = lineArray[0]
+//     game['events'] = lineArray[1].split(',')
+//     response.push(game)
+//   })
+//   pgnReader.on('close', ()=>{
+//     res.send(response)
+//   })
+// })
 
+// Create a PGN
 app.post('/api/pgns', (req, res)=>{
   Pgn.create(req.body).then((data, err)=>{
     if(err){console.log(err)}
     res.json(data)
+  })
+})
+
+// Get all of the PGNs
+app.get('/api/pgns', (req, res)=>{
+  Pgn.findAll().then((pgns, err)=>{
+    if(err){console.log(err)}
+    res.json(pgns)
+  })
+})
+
+// Get one of the pgns
+app.get('/api/pgns/:id', (req, res)=>{
+  Pgn.findById(req.params.id).then((pgn, err)=>{
+    if(err){console.log(err)}
+    res.json(pgn)
+  })
+})
+
+// Create a video
+app.post('/api/videos', (req, res)=>{
+  Video.create(req.body).then((data, err)=>{
+    if(err){console.log(err)}
+    res.json(data)
+  })
+})
+
+// Get all videos
+app.get('/api/videos', (req, res)=>{
+  Video.findAll().then((videos, err)=>{
+    if(err){console.log(err)}
+    res.json(videos)
+  })
+})
+
+// Get one of the videos
+app.get('/api/videos/:id', (req, res)=>{
+  Video.findById(req.params.id).then((video, err)=>{
+    if(err){console.log(err)}
+    res.json(video)
+  })
+})
+
+// Create an Event
+app.post('/api/videos/:video_id/pgns/:pgn_id/events', (req, res)=>{
+  Event.create(req.body).then((event, err)=>{
+    if(err){console.log(err)}
+    Pgn.findById(req.params.pgn_id).then((pgn, err)=>{
+      if(err){console.log(err)}
+      Video.findbyId(req.params.video).then((video, err)=>{
+        event.addPgn(pgn)
+        video.addEvent(event)
+        event.save()
+        video.save()
+        res.json(event)
+      })
+    })
+  })
+})
+
+// Update an Event
+app.put('/api/events/:id', (req, res)=>{
+  Event.findById(req.params.id).then(event, err)=>{
+    if(err){console.log(err)}
+    event.update(req.body)
+    res.json(event)
+  }
+})
+
+// Delete an event
+app.delete('/api/events/:id', (req, res)=>{
+  Event.findById(req.params.id).then(event, err)=>{
+    if(err){console.log(err)}
+    event.destroy()
+    res.json(event)
+  }
+})
+
+// Get all events and pgns for a video
+app.get('/api/all/:id', (req, res)=>{
+  Video.findById(req.params.id).then((video, err)=>{
+    if(err){console.log(err)}
+    Video.getEvents({ include: { model: Pgn, as 'pgn' } }).then((events, err)=>{
+      if(err){console.log(err)}
+      let data;
+      data['video'] = video;
+      data['events'] = events;
+      res.json(data)
+    })
   })
 })
