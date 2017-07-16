@@ -16,29 +16,65 @@
 </head>
 <body>
 
-  <div id="wrapper">
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <div id="game">
+          <div class="hidden ctrl-buttons">
+            <a class="back btn btn-default" href="#">Back</a>
+            <a class="next btn btn-default" href="#">Next</a>
+            <a class="flip btn btn-default" href="#">Flip</a>
+            <button class="load-new-game btn btn-default" type="button" name="button">New</button>
+          </div>
+          <div id="board" class="board"></div>
+          <p class="annot"></p>
+        </div>
 
-    <div id="game">
-      <div class="hidden ctrl-buttons">
-        <a class="back btn btn-default" href="#">Back</a>
-        <a class="next btn btn-default" href="#">Next</a>
-        <a class="flip btn btn-default" href="#">Flip</a>
-        <button class="load-new-game btn btn-default" type="button" name="button">New</button>
+        <form class="hidden pgn-form" action="">
+          <br>
+          <textarea class="pgn-field" rows="20" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
+          <br>
+          <button class="pgn-load btn btn-default" type="button" name="button">Load Game</button>
+        </form>
+
+        <div class="video-container">
+          <div class="wistia_embed wistia_async_6qsebhq6qg" style="width:640px;height:360px;"></div>
+        </div>
+
       </div>
-      <div id="board" class="board"></div>
-      <p class="annot"></p>
+      <div class="col-md-4">
+        <p>Stuff to edit goes here</p>
+        <h3>Select a Video</h3>
+        <select id="select-video">
+
+        </select>
+        <div>
+          <h3>Add and remove PGNs</h3>
+          <div class="col-md-6" id="active-pgn">
+
+          </div>
+          <div class="col-md-6">
+            <form id="pgn-add" action="index.html" method="post">
+              <select id="select-pgn" name="PgnId">
+                <!-- PGNs options will be inserted here -->
+              </select>
+              <input type="text" name="timestamp" value="">
+              <button type="submit" name="button">Add</button>
+            </form>
+          </div>
+          <br>
+
+        <div>
+        <div>
+          <h3>Add, remove, and edit moves</h3>
+          <form id="move-edit">
+            <button id="move">Update</button><button type="submit" name="button">Add</button>
+            <br>
+          </form>
+        </div>
+      </div>
     </div>
 
-    <form class="pgn-form" action="">
-      <br>
-      <textarea class="pgn-field" rows="20" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
-      <br>
-      <button class="pgn-load btn btn-default" type="button" name="button">Load Game</button>
-    </form>
-
-  </div>
-  <div class="video-container">
-    <div class="wistia_embed wistia_async_6qsebhq6qg" style="width:640px;height:360px;"></div>
   </div>
 </body>
 </html>

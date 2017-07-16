@@ -33,23 +33,6 @@ app.get('/', function(req, res){
   });
 });
 
-// app.get('/api/pgns/:id', (req, res)=>{
-//   let pgnReader = readline.createInterface({
-//     input: fs.createReadStream(`./public/javascripts/${req.params.id}`)
-//   })
-//   let response = []
-//   pgnReader.on('line', (line)=>{
-//     let game = {}
-//     let lineArray = line.split('~')
-//     game['pgn'] = lineArray[0]
-//     game['events'] = lineArray[1].split(',')
-//     response.push(game)
-//   })
-//   pgnReader.on('close', ()=>{
-//     res.send(response)
-//   })
-// })
-
 // Create a PGN
 app.post('/api/pgns', (req, res)=>{
   Pgn.create(req.body).then((data, err)=>{
@@ -145,8 +128,8 @@ app.get('/api/events/:id', (req, res)=>{
   })
 })
 
-// Get all events and pgns for a video
-app.get('/api/all/:id', (req, res)=>{
+// Get a video and all of its events
+app.get('/api/video/:id/events', (req, res)=>{
   Video.findById(req.params.id).then((video, err)=>{
     if(err){console.log(err)}
     Event.findAll({ where: { VideoId: req.params.id } }).then((events, err)=>{
