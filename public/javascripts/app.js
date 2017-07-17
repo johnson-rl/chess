@@ -8,7 +8,9 @@ jQuery(function($) {
     chess,
     videoData,
     active = {},
-    time = []
+    time = [],
+    orderedEvents,
+    activePgn
 
   $.ajax({
     method: 'GET',
@@ -49,10 +51,10 @@ jQuery(function($) {
       console.log("I got a handle to the video!", video);
       console.log('videoData',videoData)
       //   loadMoveIntoEditor(result[0])
-      let orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
+      orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
       let i = 0
       loadActivePgns()
-      loadMovesIntoEditor(orderedEvents)
+      // loadMovesIntoEditor(orderedEvents)
 
       video.bind("timechange", function(t) {
         console.log("the time changed to " + t, orderedEvents[i].timestamp);
@@ -68,6 +70,7 @@ jQuery(function($) {
               break;
             case 'end':
               console.log('remove the chess view')
+              $('.board').html('')
               break;
           }
           i++
@@ -76,9 +79,13 @@ jQuery(function($) {
     }});
   }
 
-  function loadMovesIntoEditor(moves){
+  function loadMovesIntoEditor(pgnId){
+    $('#moves-in-editor').html('')
+    activePgn = pgnId
+    let moves = ($.grep(orderedEvents, function(e){ return e.PgnId == pgnId; }))
+    console.log(moves)
     moves.forEach((move)=>{
-      $('#move-edit').append(`<label class="col-md-3">${move.type}</label><input class="col-md-9" type="text" value="${move.timestamp}" name="${move.id}">`)
+      $('#moves-in-editor').append(`<label class="col-md-3">${move.type}</label><input class="col-md-9" type="text" value="${move.timestamp}" name="${move.id}">`)
     })
   }
 
@@ -89,7 +96,7 @@ jQuery(function($) {
   }
 
   function loadActivePgns(){
-    // let active = {}
+      $('#active-pgn').html('')
     videoData.events.forEach((event)=>{
       if(!(event.PgnId in active)){
         active[event.PgnId] = ($.grep(pgnFiles, function(e){ return e.id == event.PgnId; }))[0]
@@ -101,9 +108,16 @@ jQuery(function($) {
     })
   }
 
+
   function appendPgn(pgn){
-    $('#active-pgn').append(`<span class="active-pgns"><span class="button-group"><button>Edit</button><button>Delete</button></span>${pgn.title}</span>`)
+    $('#active-pgn').append(`<form id="pgn-${pgn.id}"><span class="button-group"><button type="submit">Edit</button><input type="hidden" name="pgn-id" val="${pgn.id}"></form>${pgn.title}</span>`)
+    $(`#pgn-${pgn.id}`).submit((event)=>{
+      event.preventDefault()
+
+      loadMovesIntoEditor(pgn.id)
+    })
   }
+
 
   function loadChessGame(container, options, callback) {
     chess = $('.board', container).chess(options);
@@ -172,7 +186,7 @@ jQuery(function($) {
       console.log(data)
     }
     // TODO handle the video/pgn/event reloading
-    // location.reload()
+    location.reload()
   })
 
   $('#pgn-add').submit((event)=>{
@@ -182,11 +196,21 @@ jQuery(function($) {
     }, {});
     event.preventDefault()
     newPgn['type'] = 'start'
+    console.log(newPgn)
     $.ajax({
       type: 'POST',
       url: `/api/videos/${videoData.video.id}/pgns/${newPgn.PgnId}/events`,
       data: newPgn,
-      success: (data)=>{console.log('new pgn data:', data)}
+      success: (data)=>{console.log('new pgn data:', data); videoData.events.push(data); loadActivePgns()}
+    })
+  })
+
+  $('#add-timestamp').submit((event)=>{
+    event.preventDefault()
+    $.ajax({
+      type: 'POST',
+      url: `/api/videos/${videoId}/pgns/${activePgn}/events`,
+      data: data
     })
   })
 

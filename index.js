@@ -57,6 +57,15 @@ app.get('/api/pgns/:id', (req, res)=>{
   })
 })
 
+// Delete a PGN
+app.delete('/api/pgns/:id', (req, res)=>{
+  Pgn.findById(req.params.id).then((pgn, err)=>{
+    if(err){console.log(err)}
+    pgn.destroy()
+    res.json(pgn)
+  })
+})
+
 // Create a video
 app.post('/api/videos', (req, res)=>{
   Video.create(req.body).then((data, err)=>{

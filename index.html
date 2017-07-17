@@ -50,10 +50,20 @@
     <div class="row">
       <div class="col-md-7 col-md-offset-1 move-editor">
         <div>
+          <form id="add-timestamp">
+            <span class="title-text">Add a move:</span>
+            <input type="text" name="timestamp" placeholder="timestamp">
+            <select class="" name="type">
+              <option value="move">Move</option>
+              <option value="end">End</option>
+            </select>
+            <button class="button-group">Add</button>
+          </form>
           <form id="move-edit">
-            <span class="title-text">Add, remove, and edit moves</span>
-            <button id="move" type="submit" class="button-group">Update All</button><button name="button">Add</button>
+            <span class="title-text"> Moves for <span id="current-pgn"></span></span>
+            <button id="move" class="button-group">Update All</button>
             <br>
+            <span id="moves-in-editor"><span>
           </form>
         </div>
       </div>
