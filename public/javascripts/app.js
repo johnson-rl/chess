@@ -48,19 +48,14 @@ jQuery(function($) {
     _wq.push({ id: videoData.video.videoHash, onReady: function(video) {
       console.log("I got a handle to the video!", video);
       console.log('videoData',videoData)
-      // for (let i = 1; i<=videoData.events.length; i++){
-      //   var result = $.grep(videoData.events, function(e){ return e.order == i; });
-      //   console.log(result, i)
-      //   time.push(result[0].timestamp)
       //   loadMoveIntoEditor(result[0])
-      // }
       let orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
       let i = 0
       loadActivePgns()
+      loadMovesIntoEditor(orderedEvents)
 
       video.bind("timechange", function(t) {
         console.log("the time changed to " + t, orderedEvents[i].timestamp);
-        // if (!time[i]){i = 0; loadPgn(pgnFiles[current].pgn)}
         if (t>=orderedEvents[i].timestamp){
           switch (orderedEvents[i].type){
             case 'start':
@@ -81,8 +76,10 @@ jQuery(function($) {
     }});
   }
 
-  function loadMoveIntoEditor(move){
-    $('#move-edit').append(`<label class="col-md-3">${move.order}</label><input class="col-md-9" type="text" value="${move.timestamp}" name="${move.id}">`)
+  function loadMovesIntoEditor(moves){
+    moves.forEach((move)=>{
+      $('#move-edit').append(`<label class="col-md-3">${move.type}</label><input class="col-md-9" type="text" value="${move.timestamp}" name="${move.id}">`)
+    })
   }
 
   function loadPgnsIntoEditor(pgns){
@@ -105,7 +102,7 @@ jQuery(function($) {
   }
 
   function appendPgn(pgn){
-    $('#active-pgn').append(`${pgn.title}<button>Delete</button>`)
+    $('#active-pgn').append(`<span class="active-pgns"><span class="button-group"><button>Edit</button><button>Delete</button></span>${pgn.title}</span>`)
   }
 
   function loadChessGame(container, options, callback) {

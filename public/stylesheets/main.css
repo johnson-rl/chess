@@ -2,8 +2,8 @@ body {
   margin: 2em auto;
   text-align: center;
   font-family: helvetica, sans-serif;
-  /*background-color: #000;
-  color: white;*/
+  background-color: #000;
+  color: #737373;
 }
 #wrapper {
   margin: 0 auto;
@@ -50,10 +50,38 @@ h1 {
 
 }
 
-.video-container {
-  margin-left: 350px;
+.video {
+  margin-left: 150px;
 }
 
 .move{
   display: block;
+}
+
+#select-video {
+  height: 3em;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  font-size: 1.5em;
+}
+
+#board {
+  min-height: 600px;
+}
+
+.active-pgns {
+  display: block;
+  /*padding: 20px;*/
+  text-align: left;
+}
+
+.pgn-editor, .move-editor {
+  text-align: left;
+}
+
+.button-group {
+  margin: 20px;
 }
