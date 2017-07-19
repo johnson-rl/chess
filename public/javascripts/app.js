@@ -49,7 +49,7 @@ jQuery(function($) {
   function loadVideo(){
     _wq.push({ id: videoData.video.videoHash, onReady: function(video) {
       console.log("I got a handle to the video!", video);
-      console.log('videoData',videoData)
+      console.log('videoData',JSON.stringify(videoData))
       //   loadMoveIntoEditor(result[0])
       orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
       let i = 0
@@ -102,7 +102,7 @@ jQuery(function($) {
         active[event.PgnId] = ($.grep(pgnFiles, function(e){ return e.id == event.PgnId; }))[0]
       }
     })
-    console.log(active)
+    console.log(JSON.stringify(active))
     Object.values(active).forEach((pgn)=>{
       appendPgn(pgn)
     })
@@ -210,7 +210,7 @@ jQuery(function($) {
     $.ajax({
       type: 'POST',
       url: `/api/videos/${videoId}/pgns/${activePgn}/events`,
-      data: data
+      data: $('#add-timestamp').serialize()
     })
   })
 
