@@ -37,7 +37,7 @@ const Chess = require('chess.js').Chess;
   // })
 
 
-//// Commented section used to populate moves into db
+
 
 function readFiles(dirname, onFileContent, onError) {
   fs.readdir(dirname, function(err, filenames) {
@@ -69,7 +69,11 @@ function createFens (filename, res) {
   pgnParser((err, parser) => {
     const pgn = parser.parse(contents)[0]
     const chess = new Chess(pgn.headers.FEN)
-    // console.log(pgn)
+    pgn.moves.forEach((move)=>{
+      move.ravs.forEach((rav=>{
+        console.log(rav.moves)
+      }))
+    })
     let fens = pgn.moves.map((move) => {
       if(move.ravs){
         return move.ravs[0].moves.map((rav)=>{
@@ -88,9 +92,10 @@ function createFens (filename, res) {
         alternate: false
       }
     })
-    // console.log(fens)
-    fens.forEach((fen)=>{
-      console.log(fen)
+    let merged = [].concat.apply([], fens);
+    // console.log(merged)
+    merged.forEach((fen)=>{
+      // console.log(fen)
       fen['pgn'] = contents
       // Event.create(fen).then((event, err)=>{
       //   if(err){console.log(err)}
@@ -100,7 +105,9 @@ function createFens (filename, res) {
   })
 }
 
-readFiles('PGN_files/110_Winning_Trades/', function(filename, content) {
+
+//// Commented section used to populate moves into db
+readFiles('PGN_files/59/', function(filename, content) {
   createFens(filename, content)
 }, function(err) {
   throw err;

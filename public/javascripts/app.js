@@ -16,6 +16,7 @@ $(document).ready(()=>{
         grouped[event.pgn] = [event]
       }
     })
+    console.log(JSON.stringify(grouped))
     return grouped
   }
 
