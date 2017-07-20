@@ -20,9 +20,11 @@
   "dependencies": {
     "@masterclass/mc-wistia": "git+ssh://git@github.com/yankaindustries/mc-wistia.git",
     "body-parser": "^1.17.2",
+    "chess.js": "^0.10.2",
     "express": "^4.15.3",
     "pg": "^6.4.0",
     "pg-hstore": "^2.3.2",
+    "pgn-parser": "0.0.9",
     "sequelize": "^3.30.2"
   }
 }

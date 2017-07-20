@@ -9,6 +9,103 @@ const express = require('express'),
   Video = models.Video,
   Pgn = models.Pgn;
 
+const pgnParser = require('pgn-parser');
+
+const Chess = require('chess.js').Chess;
+
+// let fen = '1k6/4r2p/1P5P/8/8/8/8/K5R1 w - - 0 1'
+// let pgn = [
+//     '[Event "?"]',
+//     '[Site "?"]',
+//     '[Date "????.??.??"]',
+//     '[Round "?"]',
+//     '[White "?"]',
+//     '[Black "?"]',
+//     '[Result "*"]',
+//     '1.Rg8+ Kb7 2.Rg7 Rxg7 3.hxg7 *'
+//   ]
+//
+// let pgnDos = '[Event "?"][Site "?"][Date "????.??.??"][Round "?"][White "?"][Black "?"][Result "*"][SetUp "1"][FEN "1k6/4r2p/1P5P/8/8/8/8/K5R1 w - - 0 1"]1.Rg8+ Kb7 2.Rg7 Rxg7 3.hxg7 *'
+// let pgnTres = '[Event "?"]\n[Site "?"]\n[Date "????.??.??"]\n[Round "?"]\n[White "?"]\n\[Black "?"]\n[Result "*"]\n[FEN "8/2p2p2/q1P1p3/p7/4Q3/2K5/2P5/k7 w - - 0 1"]\n[SetUp "1"]\n1.Qa4+ Kb1 2.Qb3+ Kc1 3.Qb2+ Kd1 4.Qb1+ Ke2 5.Qb7 Qxb7 6.cxb7 *'
+// let chess = new Chess("8/2p2p2/q1P1p3/p7/4Q3/2K5/2P5/k7 w - - 0 1");
+// chess.load_pgn(pgnTres)
+// let moves = chess.history()
+// console.log(chess.ascii())
+  // moves.forEach((move)=>{
+  //   chess.move(move)
+  //   console.log(chess.ascii(),chess.fen())
+  // })
+
+
+//// Commented section used to populate moves into db
+
+function readFiles(dirname, onFileContent, onError) {
+  fs.readdir(dirname, function(err, filenames) {
+    if (err) {
+      onError(err);
+      return;
+    }
+    filenames.forEach(function(filename) {
+      fs.readFile(dirname + filename, 'utf-8', function(err, content) {
+        if (err) {
+          onError(err);
+          return;
+        }
+        onFileContent(filename, content);
+      });
+    });
+  });
+}
+
+function onError(err){
+  console.log('on noes!', err)
+}
+
+
+function createFens (filename, res) {
+  let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
+  // console.log(contents)
+  // parse PGN
+  pgnParser((err, parser) => {
+    const pgn = parser.parse(contents)[0]
+    const chess = new Chess(pgn.headers.FEN)
+    // console.log(pgn)
+    let fens = pgn.moves.map((move) => {
+      if(move.ravs){
+        return move.ravs[0].moves.map((rav)=>{
+          chess.move(rav.move)
+          return {
+            move: rav.move,
+            fen: chess.fen(),
+            alternate: true
+          }
+        })
+      }
+      chess.move(move.move)
+      return {
+        move: move.move,
+        fen: chess.fen(),
+        alternate: false
+      }
+    })
+    // console.log(fens)
+    fens.forEach((fen)=>{
+      console.log(fen)
+      fen['pgn'] = contents
+      // Event.create(fen).then((event, err)=>{
+      //   if(err){console.log(err)}
+      //   console.log(event)
+      // })
+    })
+  })
+}
+
+readFiles('PGN_files/110_Winning_Trades/', function(filename, content) {
+  createFens(filename, content)
+}, function(err) {
+  throw err;
+});
+
 function onError(error) { console.log('server error') }
 function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
 
@@ -87,6 +184,13 @@ app.get('/api/videos/:id', (req, res)=>{
   Video.findById(req.params.id).then((video, err)=>{
     if(err){console.log(err)}
     res.json(video)
+  })
+})
+
+app.get('/api/events', (req, res)=>{
+  Event.findAll().then((events, err)=>{
+    if(err){console.log(err)}
+    res.json(events)
   })
 })
 

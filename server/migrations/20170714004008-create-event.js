@@ -11,11 +11,14 @@ module.exports = {
       timestamp: {
         type: Sequelize.FLOAT
       },
-      order: {
-        type: Sequelize.INTEGER
-      },
-      type: {
+      fen: {
         type: Sequelize.STRING
+      },
+      move: {
+        type: Sequelize.STRING
+      },
+      pgn: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
