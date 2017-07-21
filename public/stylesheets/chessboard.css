@@ -35,7 +35,7 @@
 .board-b72b1 {
   position: relative; 
   outline: 8px solid #444444;
-  box-sizing: content-box;
+  box-sizing: content-box; 
 }
  
 .board-b72b1:before {
