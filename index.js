@@ -7,37 +7,14 @@ const express = require('express'),
   models = require('./server/models'),
   Event = models.Event,
   Video = models.Video,
-  Pgn = models.Pgn;
+  Pgn = models.Pgn,
+  timestampParse = require('timestamps');
 
 const pgnParser = require('pgn-parser');
 
 const Chess = require('chess.js').Chess;
 
-// let fen = '1k6/4r2p/1P5P/8/8/8/8/K5R1 w - - 0 1'
-// let pgn = [
-//     '[Event "?"]',
-//     '[Site "?"]',
-//     '[Date "????.??.??"]',
-//     '[Round "?"]',
-//     '[White "?"]',
-//     '[Black "?"]',
-//     '[Result "*"]',
-//     '1.Rg8+ Kb7 2.Rg7 Rxg7 3.hxg7 *'
-//   ]
-//
-// let pgnDos = '[Event "?"][Site "?"][Date "????.??.??"][Round "?"][White "?"][Black "?"][Result "*"][SetUp "1"][FEN "1k6/4r2p/1P5P/8/8/8/8/K5R1 w - - 0 1"]1.Rg8+ Kb7 2.Rg7 Rxg7 3.hxg7 *'
-// let pgnTres = '[Event "?"]\n[Site "?"]\n[Date "????.??.??"]\n[Round "?"]\n[White "?"]\n\[Black "?"]\n[Result "*"]\n[FEN "8/2p2p2/q1P1p3/p7/4Q3/2K5/2P5/k7 w - - 0 1"]\n[SetUp "1"]\n1.Qa4+ Kb1 2.Qb3+ Kc1 3.Qb2+ Kd1 4.Qb1+ Ke2 5.Qb7 Qxb7 6.cxb7 *'
-// let chess = new Chess("8/2p2p2/q1P1p3/p7/4Q3/2K5/2P5/k7 w - - 0 1");
-// chess.load_pgn(pgnTres)
-// let moves = chess.history()
-// console.log(chess.ascii())
-  // moves.forEach((move)=>{
-  //   chess.move(move)
-  //   console.log(chess.ascii(),chess.fen())
-  // })
-
-
-
+let timestampData = {}
 
 function readFiles(dirname, onFileContent, onError) {
   fs.readdir(dirname, function(err, filenames) {
@@ -57,27 +34,76 @@ function readFiles(dirname, onFileContent, onError) {
   });
 }
 
+var lineReader = readline.createInterface({
+  input: fs.createReadStream('test.csv')
+});
+
+lineReader.on('line', function (line) {
+  console.log('line', line)
+  let lineArray = line.split(',')
+  if(!timestampData[lineArray[0]]){
+    timestampData[lineArray[0]] = []
+  }
+  let data = {move: lineArray[2].split('.')[1], time: lineArray[1]}
+  timestampData[lineArray[0]].push(data)
+  // console.log(timestampData)
+});
+
 function onError(err){
   console.log('on noes!', err)
 }
 
-function fenCreator(fen, moves, type){
+lineReader.on('close',()=>{
+  console.log(timestampData)
+  readFiles('PGN_files/103/', function(filename, content) {
+    createFens(filename, content)
+  }, function(err) {
+    throw err;
+  });
+})
+
+function fenCreator(fen, moves, type, filename){
   const chess = new Chess(fen)
+  let fenArray = [];
+  if (type=='move'){
+    fenArray.push(fenCreator(chess.fen(),[{move: 'start'}], 'start',filename))
+    fenArray.push(fenCreator(chess.fen(),[{move: 'end'}], 'end',filename))
+  }
   return moves.map((move)=>{
-    let fenArray = [];
     if (move.ravs){
-      console.log('ravs')
+      // fenArray.push({move: 'reset',type:'reset', fen: chess.fen()})
+      // console.log('ravs',move.ravs[0].moves)
       move.ravs.forEach((rav)=>{
-        fenArray.push(fenCreator(chess.fen(), rav.moves, 'alternate'))
+        fenArray.push(fenCreator(chess.fen(),[{move: 'reset'}], 'reset',filename))
+        fenArray.push(fenCreator(chess.fen(), rav.moves, 'alternate', filename))
       })
     }
-    let chessMove = chess.move(move.move);
+    let chessMove
+    if (move.move != 'start' || 'end' || 'reset'){
+      chessMove = chess.move(move.move);
+    }
+
+    let time = 0
+    if (filename){
+      let file = filename.split('.')[0]
+      let times = timestampData[file]
+      time = times.filter((obj)=>{return obj.move == move.move})
+      console.log('file',file,'times',times,'time',time)
+    }
+    let timestamp = ''
+    if(time != 0){timestamp = time[0].time || ''}
+    timestampArray = timestamp.split(':')
+    toParse = 0 + ':' + timestampArray[1] + ':' + timestampArray[2] + '.' + timestampArray[3]
+
     let data =  {
       move: move.move,
       fen: chess.fen(),
       type: type,
-      chessMove: chessMove
+      chessMove: chessMove,
+      // timestamp: timestampParse.parse(toParse)
+      timestamp: timestamp
     }
+    // console.log('data',data)
     fenArray.push(data)
     return [].concat.apply([], [].concat.apply([], fenArray))
   })
@@ -86,29 +112,29 @@ function fenCreator(fen, moves, type){
 
 function createFens (filename, res) {
   let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
-  // console.log(contents)
   // parse PGN
   pgnParser((err, parser) => {
     const pgn = parser.parse(contents)[0]
-    let fens = fenCreator(pgn.headers.FEN, pgn.moves, 'move')
+
+    let fens = fenCreator(pgn.headers.FEN, pgn.moves, 'move', filename)
     let merged = [].concat.apply([], fens);
-    console.log(merged)
+    console.log('merged',merged)
     merged.forEach((fen)=>{
       fen['pgn'] = filename
-      Event.create(fen).then((event, err)=>{
-        if(err){console.log(err)}
-        console.log(event)
-      })
+      // Event.create(fen).then((event, err)=>{
+      //   if(err){console.log(err)}
+      //   console.log(event)
+      // })
     })
   })
 }
 
-// // Commented section used to populate moves into db
-readFiles('PGN_files/GK_Masterclass/', function(filename, content) {
-  createFens(filename, content)
-}, function(err) {
-  throw err;
-});
+// Commented section used to populate moves into db
+// readFiles('PGN_files/103/', function(filename, content) {
+//   createFens(filename, content)
+// }, function(err) {
+//   throw err;
+// });
 
 function onError(error) { console.log('server error') }
 function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
