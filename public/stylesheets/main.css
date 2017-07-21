@@ -1,3 +1,9 @@
+.chess-app {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 body {
   margin: 2em auto;
   text-align: center;
@@ -21,8 +27,10 @@ h1 {
   margin-bottom: 0;
 }
 .board {
-  margin: 10px 0;
-  margin-left: 250px;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  width: 384px;
 }
 
 .btn {
@@ -47,11 +55,6 @@ h1 {
 
 .fen-field, .pgn-field, .pgn-load {
   margin: 30px;
-
-}
-
-.video {
-  margin-left: 150px;
 }
 
 .move{
@@ -69,6 +72,7 @@ h1 {
 }
 
 #board {
+  position: relative;
   min-height: 600px;
 }
 

@@ -146,7 +146,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static('public'));
-
+app.use('/scripts', express.static(__dirname + '/node_modules/@masterclass/mc-chess/dist'))
 const server = require('http').createServer(app);
 
 models.sequelize.sync().then(function () {
