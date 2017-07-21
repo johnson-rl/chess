@@ -13,6 +13,7 @@ fs.readFile('./PGN_files/110_Winning_Trades/Day 2- Position 57 15-29-34.pgn', (e
     let fens = [];
     let id = 1;
     pgn.moves.forEach((move, i) => {
+      let fenSnapshot = chess.fen()
       chess.move(move.move)
       fens.push({
         move: move.move,
@@ -24,7 +25,7 @@ fs.readFile('./PGN_files/110_Winning_Trades/Day 2- Position 57 15-29-34.pgn', (e
 
       if (move.ravs) {
         move.ravs.forEach((rav) => {
-          const chess1 = new Chess(chess.fen())
+          const chess1 = new Chess(fenSnapshot)
           rav.moves.forEach((move, i) => {
             chess1.move(move.move)
             fens.push({

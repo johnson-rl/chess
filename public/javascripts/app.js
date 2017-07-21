@@ -21,12 +21,12 @@ jQuery(function($) {
     type: 'alternate',
     id: 2,
     timestamp: 6,
-    fen: '8/8/8/5p2/8/P2R4/8/1k1K1N1r b - - 0 3' },
+    fen: '8/8/8/5p2/8/3R4/P3K3/1k3N1r b - - 1 3' },
   { move: 'Kxa2',
     type: 'alternate',
     id: 3,
     timestamp: 8,
-    fen: '8/8/8/5p2/8/P2R4/8/1k1K1N1r b - - 0 3' },
+    fen: '8/8/8/5p2/8/3R4/k3K3/5N1r w - - 0 4' },
   { move: 'Rxf1+',
     type: 'move',
     id: 4,
@@ -46,22 +46,22 @@ jQuery(function($) {
     type: 'alternate',
     id: 7,
     timestamp: 16,
-    fen: '8/8/8/5p2/5r2/P2R4/4K3/1k6 w - - 2 5' },
+    fen: '8/8/8/5p2/8/P2R4/4K3/1k5r w - - 2 5' },
   { move: 'Rd1+',
     type: 'alternate',
     id: 8,
     timestamp: 18,
-    fen: '8/8/8/5p2/5r2/P7/4K3/1k1R4 b - - 3 5' },
+    fen: '8/8/8/5p2/8/P7/4K3/1k1R3r b - - 3 5' },
   { move: 'Rxd1',
     type: 'alternate',
     id: 9,
     timestamp: 20,
-    fen: '8/8/8/5p2/5r2/P7/4K3/1k1R4 b - - 3 5' },
+    fen: '8/8/8/5p2/8/P7/4K3/1k1r4 w - - 0 6' },
   { move: 'Kxd1',
     type: 'alternate',
     id: 10,
     timestamp: 22,
-    fen: '8/8/8/5p2/5r2/P7/4K3/1k1R4 b - - 3 5' },
+    fen: '8/8/8/5p2/8/P7/8/1k1K4 b - - 0 6' },
   { move: 'Rb3+',
     type: 'move',
     id: 11,
@@ -86,32 +86,32 @@ jQuery(function($) {
     type: 'alternate',
     id: 15,
     timestamp: 32,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/5p2/1r6/P7/2k1K3/8 w - - 0 7' },
   { move: 'axb4',
     type: 'alternate',
     id: 16,
     timestamp: 34,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/5p2/1P6/8/2k1K3/8 b - - 0 7' },
   { move: 'Rg4',
     type: 'alternate',
     id: 17,
     timestamp: 36,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/5p2/1R4r1/P7/2k1K3/8 w - - 6 7' },
   { move: 'Rxg4',
     type: 'alternate',
     id: 18,
     timestamp: 38,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/5p2/6R1/P7/2k1K3/8 b - - 0 7' },
   { move: 'fxg4',
     type: 'alternate',
     id: 19,
     timestamp: 40,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/8/6p1/P7/2k1K3/8 w - - 0 8' },
   { move: 'a4',
     type: 'alternate',
     id: 20,
     timestamp: 42,
-    fen: '8/8/8/5p2/1R2r3/P7/2k1K3/8 w - - 6 7' },
+    fen: '8/8/8/8/P5p1/8/2k1K3/8 b - - 0 8' },
   { move: 'Rxe4',
     type: 'move',
     id: 21,
@@ -127,10 +127,11 @@ jQuery(function($) {
     id: 23,
     timestamp: 48,
     fen: '8/8/8/8/P3p3/8/2k1K3/8 b - - 0 8' },
-  { type: 'end', id: 24, timestamp: 48 } ],
+  { type: 'end', id: 24, timestamp: 50 } ],
     time = [],
     orderedEvents,
     activeEventId = -1,
+    previousTime = 0,
     activePgn
 
   // $.ajax({
@@ -170,30 +171,42 @@ jQuery(function($) {
   }
 
   const boards = {};
+  const newBoard = (fen) => {
+    let name = 'board';
+    boards[name] = new McChess({
+      id: name,
+      position: fen
+    })
+  }
   const eventTypes = {
     start: (event) => {
-      let name = 'board';
-      boards[name] = new McChess({
-        id: name,
-        position: event.fen
-      })
+      newBoard(event.fen)
     },
     move: (event, animate) => {
-      console.log(animate)
-      // boards.board.move(event.move)
-      boards.board.position(event.fen, animate)
+      if (!boards.board) {
+        newBoard(event.fen)
+      } else {
+        boards.board.position(event.fen, { animate })
+      }
     },
     alternate: (event, animate) => {
-      console.log('alternate')
-      // boards.board.move(event.move)
-      boards.board.position(event.fen, animate)
+      if (!boards.board) {
+        newBoard(event.fen)
+      } else {
+        boards.board.position(event.fen, {
+          animate,
+          isAlternate: true
+        })
+      }
     },
     end: (event) => {
       boards.board.destroy()
+      delete boards.board
     }
   }
 
   function handleTimeChange (t) {
+    let isSeek = Math.abs(previousTime - t) > 1
     let events = newEvents.filter((event) => {
       return t > event.timestamp
     })
@@ -203,10 +216,12 @@ jQuery(function($) {
 
       if (activeEventId != event.id) {
         // do stuff
-        eventTypes[event.type](event)
+        eventTypes[event.type](event, !isSeek)
         activeEventId = event.id
       }
     }
+
+    previousTime = t
   }
 
   // function handleSeek (t) {

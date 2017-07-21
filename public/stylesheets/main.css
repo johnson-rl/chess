@@ -21,7 +21,6 @@ h1 {
   margin-bottom: 0;
 }
 .board {
-  margin: 10px 0;
   margin-left: 250px;
 }
 
@@ -69,6 +68,7 @@ h1 {
 }
 
 #board {
+  position: relative;
   min-height: 600px;
 }
 
