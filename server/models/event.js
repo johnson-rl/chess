@@ -2,7 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Event = sequelize.define('Event', {
     timestamp: DataTypes.FLOAT,
-    fen: DataTypes.STRING, move: DataTypes.STRING, pgn: DataTypes.TEXT
+    fen: DataTypes.STRING, type: DataTypes.STRING, chessMove: DataTypes.JSON, pgn: DataTypes.STRING, videoHash: DataTypes.STRING, move: DataTypes.STRING
   }, {
     classMethods: {
       associate: function(models) {

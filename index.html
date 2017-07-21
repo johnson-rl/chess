@@ -16,23 +16,13 @@
 </head>
 <body>
   <nav>
-    <span class="title-text">PGN: </span>
-    <select id="select-pgn">
+    <span class="title-text">Video: </span>
+    <select id="select-video">
 
     </select>
   </nav>
 
   <div class="row">
-
-    <div class="pgn-display">
-
-    </div>
-
-    <div class="pgn-form">
-
-    </div>
-
-    <!-- Section used for displaying a video -->
     <div>
       <div class="video-container col-md-5">
         <div class="wistia_embed wistia_async_6qsebhq6qg video" style="width:960px;height:540px;"></div>
@@ -49,6 +39,49 @@
       </div>
     </div>
 
+      <!-- <form class="hidden pgn-form" action="">
+        <br>
+        <textarea class="pgn-field" rows="20" cols="100" name="pgn" value="" placeholder="Paste PGN here"></textarea>
+        <br>
+        <button class="pgn-load btn btn-default" type="button" name="button">Load Game</button>
+      </form> -->
+
+
+    <div class="row">
+      <div class="col-md-7 col-md-offset-1 move-editor">
+        <div>
+          <form id="add-timestamp">
+            <span class="title-text">Add a move:</span>
+            <input type="text" name="timestamp" placeholder="timestamp">
+            <select class="" name="type">
+              <option value="move">Move</option>
+              <option value="end">End</option>
+            </select>
+            <button class="button-group">Add</button>
+          </form>
+          <form id="move-edit">
+            <span class="title-text"> Moves for <span id="current-pgn"></span></span>
+            <button id="move" class="button-group">Update All</button>
+            <br>
+            <span id="moves-in-editor"><span>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4 pgn-editor">
+        <h4>Add and edit PGNs</h4>
+        <div>
+          <form id="pgn-add" action="index.html" method="post">
+            <select id="select-pgn" name="PgnId">
+              <!-- PGNs options will be inserted here -->
+            </select>
+            <input type="text" name="timestamp" value="" placeholder="starting timestamp">
+            <button type="submit" name="button">Add</button>
+          </form>
+        </div>
+        <div id="active-pgn">
+        </div>
+      </div>
+    </div>
 
   </div>
 </body>

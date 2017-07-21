@@ -61,6 +61,28 @@ function onError(err){
   console.log('on noes!', err)
 }
 
+function fenCreator(fen, moves, type){
+  const chess = new Chess(fen)
+  return moves.map((move)=>{
+    let fenArray = [];
+    if (move.ravs){
+      console.log('ravs')
+      move.ravs.forEach((rav)=>{
+        fenArray.push(fenCreator(chess.fen(), rav.moves, 'alternate'))
+      })
+    }
+    let chessMove = chess.move(move.move);
+    let data =  {
+      move: move.move,
+      fen: chess.fen(),
+      type: type,
+      chessMove: chessMove
+    }
+    fenArray.push(data)
+    return [].concat.apply([], [].concat.apply([], fenArray))
+  })
+}
+
 
 function createFens (filename, res) {
   let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
@@ -68,46 +90,21 @@ function createFens (filename, res) {
   // parse PGN
   pgnParser((err, parser) => {
     const pgn = parser.parse(contents)[0]
-    const chess = new Chess(pgn.headers.FEN)
-    pgn.moves.forEach((move)=>{
-      move.ravs.forEach((rav=>{
-        console.log(rav.moves)
-      }))
-    })
-    let fens = pgn.moves.map((move) => {
-      if(move.ravs){
-        return move.ravs[0].moves.map((rav)=>{
-          chess.move(rav.move)
-          return {
-            move: rav.move,
-            fen: chess.fen(),
-            alternate: true
-          }
-        })
-      }
-      chess.move(move.move)
-      return {
-        move: move.move,
-        fen: chess.fen(),
-        alternate: false
-      }
-    })
+    let fens = fenCreator(pgn.headers.FEN, pgn.moves, 'move')
     let merged = [].concat.apply([], fens);
-    // console.log(merged)
+    console.log(merged)
     merged.forEach((fen)=>{
-      // console.log(fen)
-      fen['pgn'] = contents
-      // Event.create(fen).then((event, err)=>{
-      //   if(err){console.log(err)}
-      //   console.log(event)
-      // })
+      fen['pgn'] = filename
+      Event.create(fen).then((event, err)=>{
+        if(err){console.log(err)}
+        console.log(event)
+      })
     })
   })
 }
 
-
-//// Commented section used to populate moves into db
-readFiles('PGN_files/59/', function(filename, content) {
+// // Commented section used to populate moves into db
+readFiles('PGN_files/GK_Masterclass/', function(filename, content) {
   createFens(filename, content)
 }, function(err) {
   throw err;
@@ -133,6 +130,13 @@ models.sequelize.sync().then(function () {
 app.get('/', function(req, res){
   console.log(__dirname);
   res.sendFile('index.html', {
+    root : __dirname
+  });
+});
+
+app.get('/editor', function(req, res){
+  console.log(__dirname);
+  res.sendFile('editor.html', {
     root : __dirname
   });
 });

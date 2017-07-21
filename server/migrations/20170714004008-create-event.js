@@ -14,11 +14,20 @@ module.exports = {
       fen: {
         type: Sequelize.STRING
       },
-      move: {
+      type: {
         type: Sequelize.STRING
       },
       pgn: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
+      },
+      videoHash: {
+        type: Sequelize.STRING
+      },
+      chessMove: {
+        type: Sequelize.JSON
+      },
+      move: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
