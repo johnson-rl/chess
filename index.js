@@ -34,34 +34,40 @@ function readFiles(dirname, onFileContent, onError) {
   });
 }
 
-var lineReader = readline.createInterface({
-  input: fs.createReadStream('103-test.csv')
-});
+let seed = false;
 
-lineReader.on('line', function (line) {
-  // console.log('line', line)
-  let lineArray = line.split(',')
-  if(!timestampData[lineArray[0]]){
-    timestampData[lineArray[0]] = []
-  }
-  let data = {move: lineArray[2].split('.')[1], time: lineArray[1]}
-  timestampData[lineArray[0]].push(data)
-  // console.log(timestampData)
-});
+// seed = true // uncomment this line to seed the db
 
-function onError(err){
-  console.log('on noes!', err)
-}
-
-lineReader.on('close',()=>{
-  // console.log(timestampData)
-  readFiles('PGN_files/103/', function(filename, content) {
-    console.log(filename)
-    createFens(filename, content)
-  }, function(err) {
-    throw err;
+if (seed){
+  var lineReader = readline.createInterface({
+    input: fs.createReadStream('103-test.csv')
   });
-})
+
+  lineReader.on('line', function (line) {
+    // console.log('line', line)
+    let lineArray = line.split(',')
+    if(!timestampData[lineArray[0]]){
+      timestampData[lineArray[0]] = []
+    }
+    let data = {move: lineArray[2].split('.')[1], time: lineArray[1]}
+    timestampData[lineArray[0]].push(data)
+    console.log('timestampData',timestampData)
+  });
+
+  function onError(err){
+    console.log('on noes!', err)
+  }
+
+  lineReader.on('close',()=>{
+    // console.log(timestampData)
+    readFiles('PGN_files/103/', function(filename, content) {
+      console.log(filename)
+      createFens(filename, content)
+    }, function(err) {
+      throw err;
+    });
+  })
+}
 
 function fenCreator(fen, moves, type, filename){
   const chess = new Chess(fen)
@@ -123,20 +129,13 @@ function createFens (filename, res) {
     console.log('merged',merged)
     merged.forEach((fen)=>{
       fen['pgn'] = filename
-      // Event.create(fen).then((event, err)=>{
-      //   if(err){console.log(err)}
-      //   console.log(event)
-      // })
+      Event.create(fen).then((event, err)=>{
+        if(err){console.log(err)}
+        console.log(event)
+      })
     })
   })
 }
-
-// Commented section used to populate moves into db
-// readFiles('PGN_files/103/', function(filename, content) {
-//   createFens(filename, content)
-// }, function(err) {
-//   throw err;
-// });
 
 function onError(error) { console.log('server error') }
 function onListening() { console.log('you are now listening on', (process.env.PORT || 3000)) }
