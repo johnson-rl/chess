@@ -175,12 +175,24 @@ jQuery(function($) {
     let name = 'board';
     boards[name] = new McChess({
       id: name,
+      showNotation: true,
       position: fen
     })
   }
   const eventTypes = {
     start: (event) => {
-      newBoard(event.fen)
+      if (!boards.board) {
+        newBoard(event.fen)
+      } else {
+        boards.board.position(event.fen, { animate: false })
+      }
+    },
+    reset: (event) => {
+      if (!boards.board) {
+        newBoard(event.fen)
+      } else {
+        boards.board.position(event.fen, { animate: false })
+      }
     },
     move: (event, animate) => {
       if (!boards.board) {
@@ -207,16 +219,16 @@ jQuery(function($) {
 
   function handleTimeChange (t) {
     let isSeek = Math.abs(previousTime - t) > 1
-    let events = newEvents.filter((event) => {
-      return t > event.timestamp
-    })
+    let events = newEvents.filter((event) => t >= event.timestamp)
 
     if (events.length) {
       let event = events.pop()
 
       if (activeEventId != event.id) {
         // do stuff
-        eventTypes[event.type](event, !isSeek)
+        if (eventTypes[event.type]) {
+          eventTypes[event.type](event, !isSeek)
+        }
         activeEventId = event.id
       }
     }
@@ -224,42 +236,15 @@ jQuery(function($) {
     previousTime = t
   }
 
-  // function handleSeek (t) {
-
-  // }
-
   function loadVideo(){
     _wq.push({ id: videoData.video.videoHash, onReady: function(video) {
-      console.log("I got a handle to the video!", video);
       console.log('videoData',videoData)
       //   loadMoveIntoEditor(result[0])
       orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
-      let i = 0
       loadActivePgns()
       // loadMovesIntoEditor(orderedEvents)
 
       video.bind('timechange', (t) => handleTimeChange(t));
-      // video.bind('seek', (t) => handleTimeChange(t, false));
-      // video.bind("timechange", function(t) {
-      //   console.log("the time changed to " + t, orderedEvents[i].timestamp);
-      //   if (t>=orderedEvents[i].timestamp){
-      //     switch (orderedEvents[i].type){
-      //       case 'start':
-      //         console.log('start of a new pgn');
-      //         loadPgn(active[orderedEvents[i].PgnId].content)
-      //         break;
-      //       case 'move':
-      //         console.log('move that piece!');
-      //         chess.transitionForward();
-      //         break;
-      //       case 'end':
-      //         console.log('remove the chess view')
-      //         $('.board').html('')
-      //         break;
-      //     }
-      //     i++
-      //   }
-      // });
     }});
   }
 
