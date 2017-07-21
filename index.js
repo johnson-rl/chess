@@ -35,11 +35,11 @@ function readFiles(dirname, onFileContent, onError) {
 }
 
 var lineReader = readline.createInterface({
-  input: fs.createReadStream('test.csv')
+  input: fs.createReadStream('103-test.csv')
 });
 
 lineReader.on('line', function (line) {
-  console.log('line', line)
+  // console.log('line', line)
   let lineArray = line.split(',')
   if(!timestampData[lineArray[0]]){
     timestampData[lineArray[0]] = []
@@ -54,8 +54,9 @@ function onError(err){
 }
 
 lineReader.on('close',()=>{
-  console.log(timestampData)
+  // console.log(timestampData)
   readFiles('PGN_files/103/', function(filename, content) {
+    console.log(filename)
     createFens(filename, content)
   }, function(err) {
     throw err;
@@ -64,12 +65,8 @@ lineReader.on('close',()=>{
 
 function fenCreator(fen, moves, type, filename){
   const chess = new Chess(fen)
-  let fenArray = [];
-  if (type=='move'){
-    fenArray.push(fenCreator(chess.fen(),[{move: 'start'}], 'start',filename))
-    fenArray.push(fenCreator(chess.fen(),[{move: 'end'}], 'end',filename))
-  }
-  return moves.map((move)=>{
+  let mappedMoves = moves.map((move)=>{
+    let fenArray = [];
     if (move.ravs){
       // fenArray.push({move: 'reset',type:'reset', fen: chess.fen()})
       // console.log('ravs',move.ravs[0].moves)
@@ -78,6 +75,7 @@ function fenCreator(fen, moves, type, filename){
         fenArray.push(fenCreator(chess.fen(), rav.moves, 'alternate', filename))
       })
     }
+
     let chessMove
     if (move.move != 'start' || 'end' || 'reset'){
       chessMove = chess.move(move.move);
@@ -100,13 +98,17 @@ function fenCreator(fen, moves, type, filename){
       fen: chess.fen(),
       type: type,
       chessMove: chessMove,
-      // timestamp: timestampParse.parse(toParse)
-      timestamp: timestamp
+      timestamp: timestampParse.parse(toParse)
     }
     // console.log('data',data)
     fenArray.push(data)
     return [].concat.apply([], [].concat.apply([], fenArray))
   })
+  if (type=='move'){
+    mappedMoves.push(fenCreator(fen,[{move: 'start'}], 'start',filename)[0])
+    mappedMoves.push(fenCreator('',[{move: 'end'}], 'end',filename)[0])
+  }
+  return mappedMoves
 }
 
 
