@@ -152,7 +152,15 @@ jQuery(function($) {
   //   success: storeVideos
   // })
 
-  loadVideo()
+  $.ajax({
+    type: 'GET',
+    url: '/api/events',
+    success: (data) => {
+      newEvents = data.sort((a, b)=>{return a.timestamp - b.timestamp})
+      loadVideo()
+    }
+  })
+
 
   function storeVideos(data){
     console.log(data)
@@ -212,36 +220,41 @@ jQuery(function($) {
       }
     },
     end: (event) => {
-      boards.board.destroy()
-      delete boards.board
+      if (boards.board) {
+        boards.board.destroy()
+        delete boards.board
+      }
     }
   }
 
   function handleTimeChange (t) {
     let isSeek = Math.abs(previousTime - t) > 1
-    let events = newEvents.filter((event) => t >= event.timestamp)
-
+    let events = newEvents.filter((event) => t >= event.timestamp / 1000 && event.timestamp != 0)
+    // console.log(events)
     if (events.length) {
       let event = events.pop()
 
       if (activeEventId != event.id) {
+        console.log(event.type)
         // do stuff
         if (eventTypes[event.type]) {
           eventTypes[event.type](event, !isSeek)
         }
         activeEventId = event.id
       }
+    } else {
+      eventTypes.end()
     }
 
     previousTime = t
   }
 
   function loadVideo(){
-    _wq.push({ id: videoData.video.videoHash, onReady: function(video) {
-      console.log('videoData',videoData)
+    _wq.push({ id: 'eu2yodfadf', onReady: function(video) {
+      // console.log('videoData',videoData)
       //   loadMoveIntoEditor(result[0])
-      orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
-      loadActivePgns()
+      // orderedEvents = videoData.events.sort((a, b)=>{return a.timestamp - b.timestamp})
+      // loadActivePgns()
       // loadMovesIntoEditor(orderedEvents)
 
       video.bind('timechange', (t) => handleTimeChange(t));

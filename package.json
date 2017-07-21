@@ -19,7 +19,7 @@
   "homepage": "https://github.com/johnson-rl/chess#readme",
   "dependencies": {
     "@masterclass/mc-wistia": "https://github.com/yankaindustries/mc-wistia.git",
-    "@masterclass/mc-chess": "0.0.5",
+    "@masterclass/mc-chess": "0.0.7",
     "body-parser": "^1.17.2",
     "chess.js": "^0.10.2",
     "express": "^4.15.3",
