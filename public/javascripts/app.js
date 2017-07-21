@@ -271,7 +271,7 @@ jQuery(function($) {
         active[event.PgnId] = ($.grep(pgnFiles, function(e){ return e.id == event.PgnId; }))[0]
       }
     })
-    console.log(active)
+    console.log(JSON.stringify(active))
     Object.values(active).forEach((pgn)=>{
       appendPgn(pgn)
     })
@@ -379,7 +379,7 @@ jQuery(function($) {
     $.ajax({
       type: 'POST',
       url: `/api/videos/${videoId}/pgns/${activePgn}/events`,
-      data: data
+      data: $('#add-timestamp').serialize()
     })
   })
 

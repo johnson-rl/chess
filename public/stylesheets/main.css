@@ -61,7 +61,7 @@ h1 {
   display: block;
 }
 
-#select-video {
+#select-pgn {
   height: 3em;
   width: 90%;
   margin-bottom: 20px;
@@ -87,5 +87,13 @@ h1 {
 }
 
 .button-group {
+  margin: 20px;
+}
+
+.move-input {
+  display: block;
+}
+
+input {
   margin: 20px;
 }

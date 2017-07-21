@@ -11,10 +11,22 @@ module.exports = {
       timestamp: {
         type: Sequelize.FLOAT
       },
-      order: {
-        type: Sequelize.INTEGER
+      fen: {
+        type: Sequelize.STRING
       },
       type: {
+        type: Sequelize.STRING
+      },
+      pgn: {
+        type: Sequelize.STRING
+      },
+      videoHash: {
+        type: Sequelize.STRING
+      },
+      chessMove: {
+        type: Sequelize.JSON
+      },
+      move: {
         type: Sequelize.STRING
       },
       createdAt: {
