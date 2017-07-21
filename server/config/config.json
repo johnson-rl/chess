@@ -14,10 +14,7 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "chess_production",
-    "host": "127.0.0.1",
+    "database": "process.env.DATABASE_URL",
     "dialect": "postgres"
   }
 }
