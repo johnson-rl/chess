@@ -235,7 +235,7 @@ jQuery(function($) {
       let event = events.pop()
 
       if (activeEventId != event.id) {
-        console.table([event], ['type', 'timestamp', 'move', 'pgn', 'chessMove'])
+        console.table([event], ['type', 'timestamp', 'move', 'pgn', 'fen'])
         // do stuff
         if (eventTypes[event.type]) {
           eventTypes[event.type](event, !isSeek)
