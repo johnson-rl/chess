@@ -72,7 +72,7 @@ $(document).ready(()=>{
   ]
 
   $.ajax({
-    method: 'GET',
+    type: 'GET',
     url: 'api/events',
     success: (data)=>{events = groupEvents(data); loadPgns(events)}
   });
@@ -103,23 +103,50 @@ $(document).ready(()=>{
 
   function createMovesForm(moves){
     let inputs = ''
-    moves.forEach((move)=>{
-      inputs+=`<div class="move-input">${move.move} - ${move.fen}<input type="hidden" name="id" val="${move.id}"><input type="text" name="timestamp" val="${move.timestamp}"></div>`
+    let sortedMoves = moves.sort(orderMoves)
+    sortedMoves.forEach((move)=>{
+      inputs+=`<div class="move-input row"><span class="col-md-6">${move.move} - ${move.fen}</span><span class="col-md-3"><input type="text" name="${move.id}" class="timestamp" value="${move.timestamp}"></span></div>`
     })
 
 
     return `
     <form id="move-update">
       ${inputs}
+      <button class="btn-primary btn-large move-update-button" type="submit">Commit to Database</button>
     </form>`
+  }
+
+  function orderMoves(a,b) {
+    if (a.timestamp < b.timestamp)
+      return -1;
+    if (a.timestamp > b.timestamp)
+      return 1;
+    return 0;
   }
 
   $('#select-pgn').change(()=>{
     let selected = $('#select-pgn option:selected').text()
     let moves = events[selected]
+    console.log(moves)
     let form = createMovesForm(moves)
     $('.pgn-display').html(`<div>${selected}</div>`)
     $('.pgn-form').html(form)
+    // #TODO not sure why this is returning the window...
+    // $('.timestamp').keyup(()=>{
+    //   event.preventDefault();
+    //   console.log('keyup', this)
+    //
+    // })
+    $('#move-update').submit((event)=>{
+      event.preventDefault();
+      $.ajax({
+        type: 'PUT',
+        data: $('#move-update').serializeArray(),
+        url: 'api/batch/events/',
+        success: ()=>{console.log('updated')}
+      })
+      console.log($('#move-update').serializeArray())
+    })
   })
 
   $('#select-vid').change(()=>{

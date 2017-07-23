@@ -36,7 +36,7 @@ function readFiles(dirname, onFileContent, onError) {
 
 let seed = false;
 
-// seed = true // uncomment this line to seed the db
+seed = true // uncomment this line to seed the db
 
 if (seed){
   var lineReader = readline.createInterface({
@@ -59,8 +59,8 @@ if (seed){
   }
 
   lineReader.on('close',()=>{
-    // console.log(timestampData)
-    readFiles('PGN_files/103/', function(filename, content) {
+    console.log(timestampData)
+    readFiles('PGN_files/_test/', function(filename, content) {
       console.log(filename)
       createFens(filename, content)
     }, function(err) {
@@ -69,7 +69,7 @@ if (seed){
   })
 }
 
-function fenCreator(fen, moves, type, filename){
+function parseMoveData(fen, moves, type, filename){
   const chess = new Chess(fen)
   let mappedMoves = moves.map((move)=>{
     let fenArray = [];
@@ -77,8 +77,8 @@ function fenCreator(fen, moves, type, filename){
       // fenArray.push({move: 'reset',type:'reset', fen: chess.fen()})
       // console.log('ravs',move.ravs[0].moves)
       move.ravs.forEach((rav)=>{
-        fenArray.push(fenCreator(chess.fen(),[{move: 'reset'}], 'reset',filename))
-        fenArray.push(fenCreator(chess.fen(), rav.moves, 'alternate', filename))
+        fenArray.push(parseMoveData(chess.fen(),[{move: 'reset'}], 'reset',filename))
+        fenArray.push(parseMoveData(chess.fen(), rav.moves, 'alternate', filename))
       })
     }
 
@@ -88,14 +88,21 @@ function fenCreator(fen, moves, type, filename){
     }
 
     let time = 0
-    if (filename){
-      let file = filename.split('.')[0]
-      let times = timestampData[file]
-      time = times.filter((obj)=>{return obj.move == move.move})
-      console.log('file',file,'times',times,'time',time)
-    }
+    let file = filename.split('.')[0]
+    let times = timestampData[file]
+    time = times.filter((obj)=>{return obj.move == move.move})
+    // if (filename){
+      // console.log('file',file,'times',times,'time',time)
+    // }
     let timestamp = ''
-    if(time != 0){timestamp = time[0].time || ''}
+    if(time != 0){
+      let i = 0;
+      if (time.length > 1) {
+        let index = timestampData[file].indexOf(time[0]);
+        timestampData[file].splice(index, 1)
+      }
+      timestamp = time[i].time || ''
+    }
     timestampArray = timestamp.split(':')
     toParse = 0 + ':' + timestampArray[1] + ':' + timestampArray[2] + '.' + timestampArray[3]
 
@@ -111,12 +118,11 @@ function fenCreator(fen, moves, type, filename){
     return [].concat.apply([], [].concat.apply([], fenArray))
   })
   if (type=='move'){
-    mappedMoves.push(fenCreator(fen,[{move: 'start'}], 'start',filename)[0])
-    mappedMoves.push(fenCreator('',[{move: 'end'}], 'end',filename)[0])
+    mappedMoves.push(parseMoveData(fen,[{move: 'start'}], 'start',filename)[0])
+    mappedMoves.push(parseMoveData('',[{move: 'end'}], 'end',filename)[0])
   }
   return mappedMoves
 }
-
 
 function createFens (filename, res) {
   let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
@@ -124,17 +130,25 @@ function createFens (filename, res) {
   pgnParser((err, parser) => {
     const pgn = parser.parse(contents)[0]
 
-    let fens = fenCreator(pgn.headers.FEN, pgn.moves, 'move', filename)
+    let fens = parseMoveData(pgn.headers.FEN, pgn.moves, 'move', filename)
     let merged = [].concat.apply([], fens);
-    console.log('merged',merged)
+    console.log('merged',merged.sort(orderMoves))
     merged.forEach((fen)=>{
       fen['pgn'] = filename
-      Event.create(fen).then((event, err)=>{
-        if(err){console.log(err)}
-        console.log(event)
-      })
+      // Event.create(fen).then((event, err)=>{
+      //   if(err){console.log(err)}
+      //   console.log(event)
+      // })
     })
   })
+}
+
+function orderMoves(a,b) {
+  if (a.timestamp < b.timestamp)
+    return -1;
+  if (a.timestamp > b.timestamp)
+    return 1;
+  return 0;
 }
 
 function onError(error) { console.log('server error') }
@@ -255,6 +269,24 @@ app.post('/api/videos/:video_id/pgns/:pgn_id/events', (req, res)=>{
 
 // Update an Event
 app.put('/api/events/:id', (req, res)=>{
+  Event.findById(req.params.id).then((event, err)=>{
+    if(err){console.log(err)}
+    event.update(req.body)
+    res.json(event)
+  })
+})
+
+// Batch update events
+app.put('/api/batch/events/', (req, res)=>{
+  console.log(req.body)
+  req.body.forEach((eventData)=>{
+    Event.findById(eventData.name).then((event, err)=>{
+      if(err){console.log(err)}
+      event.update({timestamp: eventData.value})
+    })
+    res.send(200)
+  })
+
   Event.findById(req.params.id).then((event, err)=>{
     if(err){console.log(err)}
     event.update(req.body)
