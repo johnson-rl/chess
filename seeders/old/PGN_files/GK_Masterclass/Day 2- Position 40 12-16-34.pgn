@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/8/5k1b/8/P3K1P1/8/8/8 w - - 1 59"]
+
+59.a5 Bf8 60.Kd5 
+    ( 60.a6 Bc5 )
+60...Bh6 61.g5+ Bxg5 
+    ( 61...Kxg5 62.a6 )
+62.Ke4 Bh4 63.Kf3 
+    {And Black can't stop the a pawn}
+*
+

@@ -1,0 +1,18 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/6P1/3N4/8/2N2k2/3r4/8/6K1 w - - 7 75"]
+
+75.Ne3 
+    ( 75.g8=Q Rg3+ )
+    ( 75.Ne4 Rd8 )
+75...Rxe3 
+    ( 75...Kxe3 76.g8=Q )
+76.Ne4 
+    {rook can't go to e8 or g3 to prevent the pawn from queening}
+*
+

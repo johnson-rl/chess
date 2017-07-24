@@ -70,8 +70,8 @@ jQuery.eachWithContext = function(context, object, callback) {
 
     defaults : {
       fen : "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-      square_size : 77,
-      offsets : { left: 92, top: 45},
+      square_size : 60,
+      offsets : { left: 75, top: 35},
       board_element_selector : '.chess-board',
       json_annotations : false
     },
@@ -247,6 +247,7 @@ jQuery.eachWithContext = function(context, object, callback) {
             new_board[j][k] = row.substr(k, 1);
           }
         }
+        console.log(new_board)
         return new_board;
       },
 
@@ -291,6 +292,7 @@ jQuery.eachWithContext = function(context, object, callback) {
         this.game.body = this.game.body.replace(/\s\d+[\.]+/g, ' ');
 
         var moves = $.trim(this.game.body).split(/\s+/);
+        console.log('moves',moves)
         // This must be a separate variable from i, since annotations don't
         // count as moves.
         var move_number = 0;
@@ -302,7 +304,7 @@ jQuery.eachWithContext = function(context, object, callback) {
           this.game.moves[move_number] = move;
 
           var player = (move_number % 2 == 0) ? turn.first : turn.second;
-
+          console.log('move',move,player)
           // If the move was to castle
           if ( this.patterns.castle_queenside.test(move) ) {
             var rank = (player == 'w') ? 1 : 8;
@@ -630,7 +632,7 @@ jQuery.eachWithContext = function(context, object, callback) {
       /* Utility Functions */
       algebraic2Coord : function(algebraic) {
         // debugger
-        console.log(algebraic)
+        // console.log(algebraic)
         return [this.rank2Row(algebraic.substr(1, 1)), this.file2Col(algebraic.substr(0, 1))];
       },
 

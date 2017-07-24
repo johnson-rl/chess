@@ -1,9 +1,15 @@
+.chess-app {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
 body {
   margin: 2em auto;
   text-align: center;
   font-family: helvetica, sans-serif;
-  background-color: white;
-  color: black;
+  background-color: #000;
+  color: #737373;
 }
 #wrapper {
   margin: 0 auto;
@@ -21,7 +27,10 @@ h1 {
   margin-bottom: 0;
 }
 .board {
-  margin: 10px 0;
+  position: relative;
+  top: 8px;
+  left: 8px;
+  width: 384px;
 }
 
 .btn {
@@ -46,5 +55,49 @@ h1 {
 
 .fen-field, .pgn-field, .pgn-load {
   margin: 30px;
+}
 
+.move{
+  display: block;
+}
+
+#select-pgn {
+  height: 3em;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+.title-text {
+  font-size: 1.5em;
+}
+
+#board {
+  position: relative;
+  min-height: 600px;
+}
+
+.active-pgns {
+  display: block;
+  /*padding: 20px;*/
+  text-align: left;
+}
+
+.pgn-editor, .move-editor {
+  text-align: left;
+}
+
+.button-group {
+  margin: 20px;
+}
+
+.move-input {
+  font-size: 1.2em;
+}
+
+input {
+  margin-bottom: 5px;
+}
+
+.move-update-button {
+  margin: 15px;
 }

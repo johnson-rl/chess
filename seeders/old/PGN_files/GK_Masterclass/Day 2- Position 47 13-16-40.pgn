@@ -1,0 +1,17 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/1k2P3/8/4K3/8/r3B3/8/8 w - - 1 71"]
+
+71.Ba7 
+    ( 71.e8=Q Rxe3+ )
+    ( 71.Bc5 Ra8 )
+71...Rxa7 
+    ( 71...Ra1 72.Kf4 Rf1+ 73.Bf2 Rxf2+ 74.Ke3 Rf1 75.Ke2 )
+    ( 71...Kxa7 72.Kd4 Ra4+ 73.Kd5 Ra5+ 74.Kd6 Ra6+ 75.Kd7 )
+72.e8=Q *
+
