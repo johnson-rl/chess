@@ -91,14 +91,18 @@ $(document).ready(()=>{
   }
 
   function loadPgns(events){
-    let keys = Object.keys(events)
+    let keys = Object.keys(events).map((key)=>{
+      return { key: key, order: parseInt(key.split('Position ')[1].split(' ')[0]) }
+    })
+    console.log(keys)
+    keys.sort(orderPgns)
     keys.forEach((key)=>{
-      $('#select-pgn').append(`<option value=${key}>${key}<option>`)
+      $('#select-pgn').append(`<option value=${key.key}>${key.key}</option>`)
     })
   }
 
   videoList.forEach((vid)=>{
-    $('#select-vid').append(`<option value=${vid.hash}>${vid.title}<option>`)
+    $('#select-vid').append(`<option value=${vid.hash}>${vid.title}</option>`)
   })
 
   function createMovesForm(moves){
@@ -131,7 +135,7 @@ $(document).ready(()=>{
     let form = createMovesForm(moves)
     $('.pgn-display').html(`<div>${selected}</div>`)
     $('.pgn-form').html(form)
-    // #TODO not sure why this is returning the window...
+    // #TODO not sure why this is returning the window.
     // $('.timestamp').keyup(()=>{
     //   event.preventDefault();
     //   console.log('keyup', this)
@@ -139,11 +143,14 @@ $(document).ready(()=>{
     // })
     $('#move-update').submit((event)=>{
       event.preventDefault();
-      $.ajax({
-        type: 'PUT',
-        data: $('#move-update').serializeArray(),
-        url: 'api/batch/events/',
-        success: ()=>{console.log('updated')}
+      let updates = $('#move-update').serializeArray()
+      updates.forEach((update)=>{
+        $.ajax({
+          type: 'PUT',
+          data: {timestamp: update.value},
+          url: `api/events/${update.name}`,
+          success: ()=>{console.log('updated')}
+        })
       })
       console.log($('#move-update').serializeArray())
     })
@@ -156,12 +163,12 @@ $(document).ready(()=>{
     $('.video-container').html(content)
   })
 
-  // function compare(a,b) {
-  //   if (a.pgn < b.pgn)
-  //     return -1;
-  //   if (a.pgn > b.pgn)
-  //     return 1;
-  //   return 0;
-  // }
+  function orderPgns(a,b) {
+    if (a.order < b.order)
+      return -1;
+    if (a.order > b.order)
+      return 1;
+    return 0;
+  }
 
 })
