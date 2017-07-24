@@ -36,7 +36,7 @@ function readFiles(dirname, onFileContent, onError) {
 
 let seed = false;
 
-// seed = true // uncomment this line to seed the db
+seed = true // uncomment this line to seed the db
 
 if (seed){
   Event.findAll().then((events)=>{
