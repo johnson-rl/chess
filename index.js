@@ -36,7 +36,7 @@ function readFiles(dirname, onFileContent, onError) {
 
 let seed = false;
 
-// seed = true // uncomment this line to seed the db
+seed = true // uncomment this line to seed the db
 
 if (seed){
   Event.findAll().then((events)=>{
@@ -109,15 +109,7 @@ function parseMoveData(fen, moves, type, filename){
       timestamp = time[i].time || ''
     }
     timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
-    // toParse = 0 + ':' + timestampArray[1] + ':' + timestampArray[2] + '.' + timestampArray[3]
-    // let calc = (((((timestampArray[0]-1) * 60 +timestampArray[1]) * 60) + 3 + timestampArray[2])*24 + timestampArray[3])/23.98 * 60
     let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
-    // 1. Add 3 seconds to account for the video intro (+00:00:03:00)
-    // 3. Convert hh:mm:ss into seconds (ignore ff)
-    // 4. Multiply seconds by 24 fps
-    // 5. Add in the frames (ff)
-    // 6. Divide by 23.98 to get to the number of seconds in standard time
-    // 7. (optional) multiply by 60 to get milliseconds
     console.log(timestampArray, calc)
 
 
