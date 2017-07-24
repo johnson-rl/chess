@@ -1,10 +1,10 @@
 Day 1- Position 1 11-26-51 v2-JT,01:00:18:23,.start,.start
-Day 1- Position 1 11-26-51 v2-JT,01:00:39:21,end,end
+Day 1- Position 1 11-26-51 v2-JT,01:00:39:21,.end,.end
 Day 1- Position 2 11-27-14 v2-JT,01:00:43:01,.start,.start
-Day 1- Position 2 11-27-14 v2-JT,01:01:03:08,end,end
+Day 1- Position 2 11-27-14 v2-JT,01:01:03:08,.end,.end
 Day 1- Position 3 11-27-51 v2-JT,01:01:21:10,.start,.start
 Day 1- Position 3 11-27-51 v2-JT,01:01:37:21,1.c5+,move
-Day 1- Position 3 11-27-51 v2-JT,01:01:53:14,end,end
+Day 1- Position 3 11-27-51 v2-JT,01:01:53:14,.end,.end
 Day 1- Position 4 11-28-19 v2-JT,01:02:01:10,.start,.start
 Day 1- Position 4 11-28-19 v2-JT,01:02:06:09,1.c5+,move
 Day 1- Position 4 11-28-19 v2-JT,01:02:36:09,1.Kxc5,move
@@ -12,7 +12,7 @@ Day 1- Position 4 11-28-19 v2-JT,01:02:27:20,1.Qxc5,alternate
 Day 1- Position 4 11-28-19 v2-JT,01:02:30:13,2.Na4+,alternate
 Day 1- Position 4 11-28-19 v2-JT,01:02:34:02,.reset,.reset
 Day 1- Position 4 11-28-19 v2-JT,01:02:38:12,2.Ne4+,move
-Day 1- Position 4 11-28-19 v2-JT,01:02:42:11,end,end
+Day 1- Position 4 11-28-19 v2-JT,01:02:42:11,.end,.end
 Day 1- Position 5 11-33-02 v2-JT,01:05:27:21,.start,.start
 Day 1- Position 5 11-33-02 v2-JT,01:05:44:12,1.Rb8,move
 Day 1- Position 5 11-33-02 v2-JT,01:05:49:19,2.Rb5,move
@@ -22,12 +22,12 @@ Day 1- Position 5 11-33-02 v2-JT,01:05:57:19,3.Rxb1,alternate
 Day 1- Position 5 11-33-02 v2-JT,01:06:00:08,.reset,.reset
 Day 1- Position 5 11-33-02 v2-JT,01:06:21:12,3.Rb8+,move
 Day 1- Position 5 11-33-02 v2-JT,01:06:32:23,3.Bg8,move
-Day 1- Position 5 11-33-02 v2-JT,01:06:38:05,end,end
+Day 1- Position 5 11-33-02 v2-JT,01:06:38:05,.end,.end
 Day 1- Position 6 11-35-09 v2-JT,01:07:17:22,.start,.start
 Day 1- Position 6 11-35-09 v2-JT,01:07:41:10,4.g6,move
 Day 1- Position 6 11-35-09 v2-JT,01:07:37:09,4.h6,alternate
 Day 1- Position 6 11-35-09 v2-JT,01:07:40:00,.reset,.reset
-Day 1- Position 6 11-35-09 v2-JT,01:07:43:00,end,end
+Day 1- Position 6 11-35-09 v2-JT,01:07:43:00,.end,.end
 Day 1- Position 7 11-37-23 v2-JT,01:09:08:01,.start,.start
 Day 1- Position 7 11-37-23 v2-JT,01:10:09:10,5.Rh2+,move
 Day 1- Position 7 11-37-23 v2-JT,01:09:40:02,5.Rhh8,alternate 1
@@ -46,12 +46,12 @@ Day 1- Position 7 11-37-23 v2-JT,01:11:15:03,8.Kc2,move
 Day 1- Position 7 11-37-23 v2-JT,01:11:16:21,9.Rb2+,move
 Day 1- Position 7 11-37-23 v2-JT,,9.Kd3,move
 Day 1- Position 7 11-37-23 v2-JT,,10.Rxh2,move
-Day 1- Position 7 11-37-23 v2-JT,01:11:26:12,end,end
+Day 1- Position 7 11-37-23 v2-JT,01:11:26:12,.end,.end
 Day 1- Position 8 11-47-39,01:17:22:00,.start,.start
 Day 1- Position 8 11-47-39,01:17:41:00,5.Nc7,move
 Day 1- Position 8 11-47-39,01:17:47:07,5.Rxd1,move
 Day 1- Position 8 11-47-39,01:17:48:15,6.Rxd1,move
-Day 1- Position 8 11-47-39,01:18:13:00,end,end
+Day 1- Position 8 11-47-39,01:18:13:00,.end,.end
 Day 1- Position 9 11-56-50 v2-JT,01:22:21:10,.start,.start
 Day 1- Position 9 11-56-50 v2-JT,01:23:21:16,6.c8=R,move
 Day 1- Position 9 11-56-50 v2-JT,01:22:41:07,6.c8=Q,alternate
@@ -60,7 +60,7 @@ Day 1- Position 9 11-56-50 v2-JT,01:23:02:04,7.Qxc4,alternate
 Day 1- Position 9 11-56-50 v2-JT,01:23:14:00,.reset,.reset
 Day 1- Position 9 11-56-50 v2-JT,01:23:42:00,6.Ra4,move
 Day 1- Position 9 11-56-50 v2-JT,01:23:52:00,7.Kb3,move
-Day 1- Position 9 11-56-50 v2-JT,01:24:01:07,end,end
+Day 1- Position 9 11-56-50 v2-JT,01:24:01:07,.end,.end
 Day 1- Position 10 11-59-24,01:24:40:19,.start,.start
 Day 1- Position 10 11-59-24,01:26:23:14,7.Nb6,move
 Day 1- Position 10 11-59-24,01:25:01:11,7.Bxe3,alternate 1
@@ -79,7 +79,7 @@ Day 1- Position 10 11-59-24,01:27:22:10,.reset,.reset
 Day 1- Position 10 11-59-24,01:27:32:07,8.Nd5+,move
 Day 1- Position 10 11-59-24,01:27:35:18,8.Kc5,move
 Day 1- Position 10 11-59-24,01:27:36:18,9.Nxe3,move
-Day 1- Position 10 11-59-24,01:27:51:06,end,end
+Day 1- Position 10 11-59-24,01:27:51:06,.end,.end
 Day 1- Position 11 12-21-33 v2-JT,01:29:37:02,.start,.start
 Day 1- Position 11 12-21-33 v2-JT,01:30:31:20,12.Rh4,move
 Day 1- Position 11 12-21-33 v2-JT,01:30:09:19,12.Ra3+,alternate
@@ -91,7 +91,7 @@ Day 1- Position 11 12-21-33 v2-JT,01:30:48:05,13.Kd4,move
 Day 1- Position 11 12-21-33 v2-JT,01:30:49:06,14.Ra4+,move
 Day 1- Position 11 12-21-33 v2-JT,,14.Kd3,move
 Day 1- Position 11 12-21-33 v2-JT,,15.Rxh4,move
-Day 1- Position 11 12-21-33 v2-JT,01:30:56:10,end,end
+Day 1- Position 11 12-21-33 v2-JT,01:30:56:10,.end,.end
 Day 1- Position 12 12-23-02,01:31:21:04,.start,.start
 Day 1- Position 12 12-23-02,01:32:05:11,12.O-O-O,move
 Day 1- Position 12 12-23-02,01:31:31:03,12.Rh4,alternate
@@ -101,7 +101,7 @@ Day 1- Position 12 12-23-02,01:31:39:22,13.Kf4,alternate
 Day 1- Position 12 12-23-02,01:31:41:02,14.Ra4+,alternate
 Day 1- Position 12 12-23-02,01:31:42:20,14.Kg5,alternate
 Day 1- Position 12 12-23-02,01:31:46:00,.reset,.reset
-Day 1- Position 12 12-23-02,01:32:29:10,end,end
+Day 1- Position 12 12-23-02,01:32:29:10,.end,.end
 Day 1- Position 13 12-25-04,01:33:07:16,.start,.start
 Day 1- Position 13 12-25-04,01:35:21:02,12.Rb6+,move
 Day 1- Position 13 12-25-04,01:34:01:04,12.Ka6,alternate
@@ -126,4 +126,4 @@ Day 1- Position 13 12-25-04,01:36:37:00,15.Kb8,move
 Day 1- Position 13 12-25-04,01:36:38:06,16.Nxd7+,move
 Day 1- Position 13 12-25-04,01:36:43:22,16.Kc7,move
 Day 1- Position 13 12-25-04,01:36:44:23,17.Nxf8,move
-Day 1- Position 13 12-25-04,01:36:56:05,end,end
+Day 1- Position 13 12-25-04,01:36:56:05,.end,.end
