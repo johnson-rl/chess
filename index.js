@@ -36,11 +36,16 @@ function readFiles(dirname, onFileContent, onError) {
 
 let seed = false;
 
-seed = true // uncomment this line to seed the db
+// seed = true // uncomment this line to seed the db
 
 if (seed){
+  Event.findAll().then((events)=>{
+    events.forEach((event)=>{
+      event.destroy()
+    })
+  })
   var lineReader = readline.createInterface({
-    input: fs.createReadStream('103-test.csv')
+    input: fs.createReadStream('jtan-edits.csv')
   });
 
   lineReader.on('line', function (line) {
@@ -60,7 +65,7 @@ if (seed){
 
   lineReader.on('close',()=>{
     console.log(timestampData)
-    readFiles('PGN_files/_test/', function(filename, content) {
+    readFiles('PGN_files/103/', function(filename, content) {
       console.log(filename)
       createFens(filename, content)
     }, function(err) {
@@ -103,15 +108,27 @@ function parseMoveData(fen, moves, type, filename){
       }
       timestamp = time[i].time || ''
     }
-    timestampArray = timestamp.split(':')
-    toParse = 0 + ':' + timestampArray[1] + ':' + timestampArray[2] + '.' + timestampArray[3]
+    timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
+    // toParse = 0 + ':' + timestampArray[1] + ':' + timestampArray[2] + '.' + timestampArray[3]
+    // let calc = (((((timestampArray[0]-1) * 60 +timestampArray[1]) * 60) + 3 + timestampArray[2])*24 + timestampArray[3])/23.98 * 60
+    let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
+    // 1. Add 3 seconds to account for the video intro (+00:00:03:00)
+    // 3. Convert hh:mm:ss into seconds (ignore ff)
+    // 4. Multiply seconds by 24 fps
+    // 5. Add in the frames (ff)
+    // 6. Divide by 23.98 to get to the number of seconds in standard time
+    // 7. (optional) multiply by 60 to get milliseconds
+    console.log(timestampArray, calc)
+
+
 
     let data =  {
       move: move.move,
       fen: chess.fen(),
       type: type,
       chessMove: chessMove,
-      timestamp: timestampParse.parse(toParse)
+      // timestamp: timestampParse.parse(toParse)
+      timestamp: calc
     }
     // console.log('data',data)
     fenArray.push(data)
@@ -135,10 +152,10 @@ function createFens (filename, res) {
     console.log('merged',merged.sort(orderMoves))
     merged.forEach((fen)=>{
       fen['pgn'] = filename
-      // Event.create(fen).then((event, err)=>{
-      //   if(err){console.log(err)}
-      //   console.log(event)
-      // })
+      Event.create(fen).then((event, err)=>{
+        if(err){console.log(err)}
+        console.log(event)
+      })
     })
   })
 }
