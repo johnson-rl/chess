@@ -264,6 +264,10 @@ jQuery(function($) {
         newEvents = data.sort((a, b)=>{return a.timestamp - b.timestamp})
         console.log(newEvents)
         $('.video').replaceWith(`<div class="wistia_embed wistia_async_${videoList[selected].hash} video" style="width:701px;height:392px;"></div>`)
+        if (boards.board) {
+          boards.board.destroy()
+          delete boards.board
+        }
         loadVideo(videoList[selected].hash)
       }
     })
