@@ -154,9 +154,10 @@ jQuery(function($) {
 
   $.ajax({
     type: 'GET',
-    url: '/api/events',
+    url: '/api/chapter/3',
     success: (data) => {
       newEvents = data.sort((a, b)=>{return a.timestamp - b.timestamp})
+      console.log(newEvents)
       loadVideo()
     }
   })
