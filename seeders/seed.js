@@ -69,7 +69,7 @@ function onError(err){
 lineReader.on('close',()=>{
   // console.log(timestampData)
   readFiles(`./seeders/${process.argv[2]}/pgns/`, function(filename, content) {
-    console.log(filename)
+    // console.log(filename)
     createFens(filename, content)
   }, function(err) {
     throw err;
@@ -99,7 +99,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  console.log('times',timestampData,'file',file)
+  // console.log('times',timestampData,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (filename){
     // console.log('file',file,'times',times,'time',time)
@@ -115,23 +115,26 @@ let mappedMoves = moves.map((move)=>{
     chapter = time[0].videoHash
     timestamp = time[i].time || ''
   }
-  timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
-  let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
-  // console.log(timestampArray, calc)
+  if (timestamp != null){
+
+    timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
+    let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
+    // console.log(timestampArray, calc)
 
 
-  let data =  {
-    move: move.move,
-    fen: chess.fen(),
-    type: type,
-    chessMove: chessMove,
-    // timestamp: timestampParse.parse(toParse)
-    timestamp: calc,
-    videoHash: chapter
+    let data =  {
+      move: move.move,
+      fen: chess.fen(),
+      type: type,
+      chessMove: chessMove,
+      // timestamp: timestampParse.parse(toParse)
+      timestamp: calc,
+      videoHash: chapter
+    }
+    // console.log('data',data)
+    fenArray.push(data)
+    return [].concat.apply([], [].concat.apply([], fenArray))
   }
-  // console.log('data',data)
-  fenArray.push(data)
-  return [].concat.apply([], [].concat.apply([], fenArray))
 })
 if (type=='move'){
   mappedMoves.push(parseMoveData(fen,[{move: 'start'}], 'start',filename)[0])
@@ -144,18 +147,30 @@ function createFens (filename, res) {
 let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
 // parse PGN
 pgnParser((err, parser) => {
-  console.log('filename',filename)
   const pgn = parser.parse(contents)[0]
+
+
+  // #TODO Delete this code after debugging submoves
+  // pgn.moves.forEach((move)=> {
+  //   if(move.ravs){
+  //     move.ravs.forEach((rav)=>{
+  //       console.log(rav)
+  //     })
+  //
+  //   }
+  // })
+
+    // console.log('filename',filename, pgn)
 
   let fens = parseMoveData(pgn.headers.FEN, pgn.moves, 'move', filename)
   let merged = [].concat.apply([], fens);
-  // console.log('merged',merged.sort(orderMoves))
+  console.log('merged',merged.sort(orderMoves))
   merged.forEach((fen)=>{
     fen['pgn'] = filename
     if(seed){
       Event.create(fen).then((event, err)=>{
         if(err){console.log(err)}
-        console.log(`created ${number} entrie(s)`)
+        // console.log(`created ${number} entrie(s)`)
         number++
       })
     }

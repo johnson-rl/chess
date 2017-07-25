@@ -130,6 +130,13 @@ app.get('/api/chapter/:id', (req, res)=>{
   })
 })
 
+app.get('/api/null', (req, res)=>{
+  Event.findAll({where: {timestamp: null}}).then((events, err)=>{
+    if(err){console.log(err)}
+    res.json(events)
+  })
+})
+
 // Create an Event
 app.post('/api/videos/:video_id/pgns/:pgn_id/events', (req, res)=>{
   Event.create(req.body).then((event, err)=>{
