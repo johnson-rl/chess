@@ -101,8 +101,8 @@ let mappedMoves = moves.map((move)=>{
   let times = timestampData[file]
   // console.log('times',timestampData,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
-  // if (filename){
-    // console.log('file',file,'times',times,'time',time)
+  // if (!(time.length> 0)){
+  //   console.log(time)
   // }
   let timestamp = ''
   let chapter = null
@@ -115,13 +115,11 @@ let mappedMoves = moves.map((move)=>{
     chapter = time[0].videoHash
     timestamp = time[i].time || ''
   }
-  if (timestamp != null){
+  if (timestamp === null){}
+  timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
+  let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
 
-    timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
-    let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
-    // console.log(timestampArray, calc)
-
-
+  if(!isNaN(calc)){
     let data =  {
       move: move.move,
       fen: chess.fen(),
@@ -133,8 +131,9 @@ let mappedMoves = moves.map((move)=>{
     }
     // console.log('data',data)
     fenArray.push(data)
-    return [].concat.apply([], [].concat.apply([], fenArray))
   }
+
+  return [].concat.apply([], [].concat.apply([], fenArray))
 })
 if (type=='move'){
   mappedMoves.push(parseMoveData(fen,[{move: 'start'}], 'start',filename)[0])
@@ -150,7 +149,7 @@ pgnParser((err, parser) => {
   const pgn = parser.parse(contents)[0]
 
 
-  // #TODO Delete this code after debugging submoves
+  //#TODO Delete this code after debugging submoves
   // pgn.moves.forEach((move)=> {
   //   if(move.ravs){
   //     move.ravs.forEach((rav)=>{
@@ -164,7 +163,7 @@ pgnParser((err, parser) => {
 
   let fens = parseMoveData(pgn.headers.FEN, pgn.moves, 'move', filename)
   let merged = [].concat.apply([], fens);
-  console.log('merged',merged.sort(orderMoves))
+  // console.log('merged',merged.sort(orderMoves))
   merged.forEach((fen)=>{
     fen['pgn'] = filename
     if(seed){
