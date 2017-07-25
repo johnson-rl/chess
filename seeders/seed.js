@@ -15,6 +15,7 @@ const pgnParser = require('pgn-parser');
 const Chess = require('chess.js').Chess;
 
 let timestampData = {}
+let number = 1
 
 function readFiles(dirname, onFileContent, onError) {
 fs.readdir(dirname, function(err, filenames) {
@@ -39,11 +40,13 @@ let seed = false;
 seed = true // uncomment this line to seed the db
 
 if (seed){
-Event.findAll().then((events)=>{
-  events.forEach((event)=>{
-    event.destroy()
+  Event.findAll().then((events)=>{
+    events.forEach((event)=>{
+      event.destroy()
+    })
   })
-})
+}
+
 var lineReader = readline.createInterface({
   input: fs.createReadStream(`./seeders/${process.argv[2]}/seed.csv`)
 });
@@ -54,9 +57,9 @@ lineReader.on('line', function (line) {
   if(!timestampData[lineArray[0]]){
     timestampData[lineArray[0]] = []
   }
-  let data = {move: lineArray[2].split('.')[1], time: lineArray[1]}
+  let data = {move: lineArray[2].split('.')[1], time: lineArray[1], videoHash: lineArray[3]}
   timestampData[lineArray[0]].push(data)
-  console.log('timestampData',timestampData)
+  // console.log('timestampData',timestampData)
 });
 
 function onError(err){
@@ -64,7 +67,7 @@ function onError(err){
 }
 
 lineReader.on('close',()=>{
-  console.log(timestampData)
+  // console.log(timestampData)
   readFiles(`./seeders/${process.argv[2]}/pgns/`, function(filename, content) {
     console.log(filename)
     createFens(filename, content)
@@ -72,7 +75,6 @@ lineReader.on('close',()=>{
     throw err;
   });
 })
-}
 
 function parseMoveData(fen, moves, type, filename){
 const chess = new Chess(fen)
@@ -93,25 +95,29 @@ let mappedMoves = moves.map((move)=>{
   }
 
   let time = 0
-  let file = filename.split('.')[0]
+  let fileArray = filename.split('.');
+  fileArray.pop()
+  let file = fileArray.join('.')
   let times = timestampData[file]
+  console.log('times',timestampData,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (filename){
     // console.log('file',file,'times',times,'time',time)
   // }
   let timestamp = ''
+  let chapter = null
   if(time != 0){
     let i = 0;
     if (time.length > 1) {
       let index = timestampData[file].indexOf(time[0]);
       timestampData[file].splice(index, 1)
     }
+    chapter = time[0].videoHash
     timestamp = time[i].time || ''
   }
   timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
   let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
-  console.log(timestampArray, calc)
-
+  // console.log(timestampArray, calc)
 
 
   let data =  {
@@ -120,7 +126,8 @@ let mappedMoves = moves.map((move)=>{
     type: type,
     chessMove: chessMove,
     // timestamp: timestampParse.parse(toParse)
-    timestamp: calc
+    timestamp: calc,
+    videoHash: chapter
   }
   // console.log('data',data)
   fenArray.push(data)
@@ -137,17 +144,21 @@ function createFens (filename, res) {
 let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
 // parse PGN
 pgnParser((err, parser) => {
+  console.log('filename',filename)
   const pgn = parser.parse(contents)[0]
 
   let fens = parseMoveData(pgn.headers.FEN, pgn.moves, 'move', filename)
   let merged = [].concat.apply([], fens);
-  console.log('merged',merged.sort(orderMoves))
+  // console.log('merged',merged.sort(orderMoves))
   merged.forEach((fen)=>{
     fen['pgn'] = filename
-    Event.create(fen).then((event, err)=>{
-      if(err){console.log(err)}
-      console.log(event)
-    })
+    if(seed){
+      Event.create(fen).then((event, err)=>{
+        if(err){console.log(err)}
+        console.log(`created ${number} entrie(s)`)
+        number++
+      })
+    }
   })
 })
 }

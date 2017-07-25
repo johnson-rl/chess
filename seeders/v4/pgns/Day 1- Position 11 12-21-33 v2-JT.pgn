@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "7r/8/8/8/2R5/3k4/8/R2K4 w - - 0 12"]
+
+12.Rh4 
+    ( 12.Ra3+ Kxc4 {Is a draw} )
+12...Rxh4 13.Ra3+ Kd4 14.Ra4+ *
+

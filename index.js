@@ -98,8 +98,33 @@ app.get('/api/videos/:id', (req, res)=>{
   })
 })
 
+// Get all events
 app.get('/api/events', (req, res)=>{
   Event.findAll().then((events, err)=>{
+    if(err){console.log(err)}
+    res.json(events)
+  })
+})
+
+// Get all events as json
+app.get('/api/events/json',(req, res)=>{
+  Event.findAll().then((events, err)=>{
+    if(err){console.log(err)}
+    let eventObj = {}
+    events.forEach((event)=>{
+      if (eventObj[event.videoHash]){
+        eventObj[event.videoHash].push(event)
+      } else {
+        eventObj[event.videoHash] = [event]
+      }
+    })
+    res.json(eventObj)
+  })
+})
+
+// Get events for a chapter
+app.get('/api/chapter/:id', (req, res)=>{
+  Event.findAll({where: {videoHash: req.params.id}}).then((events, err)=>{
     if(err){console.log(err)}
     res.json(events)
   })
