@@ -101,7 +101,15 @@ app.get('/api/videos/:id', (req, res)=>{
 app.get('/api/events', (req, res)=>{
   Event.findAll().then((events, err)=>{
     if(err){console.log(err)}
-    res.json(events)
+    let eventObj = {}
+    events.forEach((event)=>{
+      if (eventObj[event.videoHash]){
+        eventObj[event.videoHash].push(event)
+      } else {
+        eventObj[event.videoHash] = [event]
+      }
+    })
+    res.json(eventObj)
   })
 })
 

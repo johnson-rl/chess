@@ -1,0 +1,16 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "r3k2r/ppp2ppp/8/2bp1Rq1/6P1/1B1p2P1/PPPP2P1/RNBQ3K b - - 1 31"]
+
+31...h5 
+    ( 31...Qh6+ 32.Rh5 )
+32.gxh5 
+    ( 32.Rxg5 hxg4+ )
+    ( 32.Qe1+ )
+32...Qxf5 *
+
