@@ -84,8 +84,15 @@ let mappedMoves = moves.map((move)=>{
     // fenArray.push({move: 'reset',type:'reset', fen: chess.fen()})
     // console.log('ravs',move.ravs[0].moves)
     move.ravs.forEach((rav)=>{
-      fenArray.push(parseMoveData(chess.fen(),[{move: 'reset'}], 'reset',filename))
+      console.log('rav', rav.moves, 'fen', chess.fen())
       fenArray.push(parseMoveData(chess.fen(), rav.moves, 'alternate', filename))
+      if (rav.ravs){
+        chess.move(rav.move)
+        console.log('ravception!!!', chess.fen())
+      }
+      let ans = parseMoveData(chess.fen(),[{move: 'reset'}], 'reset',filename)
+      fenArray.push(ans)
+      console.log(ans)
     })
   }
 
