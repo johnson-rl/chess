@@ -77,28 +77,40 @@ lineReader.on('close',()=>{
 })
 
 function parseMoveData(fen, moves, type, filename){
-const chess = new Chess(fen)
+let chess = new Chess(fen)
 let mappedMoves = moves.map((move)=>{
   let fenArray = [];
   if (move.ravs){
     // fenArray.push({move: 'reset',type:'reset', fen: chess.fen()})
     // console.log('ravs',move.ravs[0].moves)
     move.ravs.forEach((rav)=>{
-      console.log('rav', rav.moves, 'fen', chess.fen())
       fenArray.push(parseMoveData(chess.fen(), rav.moves, 'alternate', filename))
       if (rav.ravs){
         chess.move(rav.move)
-        console.log('ravception!!!', chess.fen())
       }
       let ans = parseMoveData(chess.fen(),[{move: 'reset'}], 'reset',filename)
       fenArray.push(ans)
-      console.log(ans)
     })
   }
 
   let chessMove
   if (move.move != 'start' || 'end' || 'reset'){
     chessMove = chess.move(move.move);
+    if (!chessMove){
+      let currentFen = chess.fen()
+      console.log(currentFen)
+      let index = currentFen.indexOf(' ') + 1
+      let turn = currentFen[index]
+      if (turn === 'w'){
+        turn = 'b'
+      } else {
+        turn = 'w'
+      }
+      currentFen = currentFen.slice(0, index) + turn + currentFen.slice((index+1))
+      chess = new Chess(currentFen)
+      chessMove = chess.move(move.move)
+      console.log(currentFen, chessMove)
+    }
   }
 
   let time = 0
@@ -154,17 +166,6 @@ let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
 // parse PGN
 pgnParser((err, parser) => {
   const pgn = parser.parse(contents)[0]
-
-
-  //#TODO Delete this code after debugging submoves
-  // pgn.moves.forEach((move)=> {
-  //   if(move.ravs){
-  //     move.ravs.forEach((rav)=>{
-  //       console.log(rav)
-  //     })
-  //
-  //   }
-  // })
 
     // console.log('filename',filename, pgn)
 

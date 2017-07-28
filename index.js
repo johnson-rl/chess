@@ -27,6 +27,14 @@ models.sequelize.sync().then(function () {
   server.on('listening', onListening);
 });
 
+function orderMoves(a,b) {
+if (a.timestamp < b.timestamp)
+  return -1;
+if (a.timestamp > b.timestamp)
+  return 1;
+return 0;
+}
+
 app.get('/', function(req, res){
   console.log(__dirname);
   res.sendFile('index.html', {
@@ -102,6 +110,7 @@ app.get('/api/videos/:id', (req, res)=>{
 app.get('/api/events', (req, res)=>{
   Event.findAll().then((events, err)=>{
     if(err){console.log(err)}
+    console.log(events.length)
     res.json(events)
   })
 })
@@ -126,6 +135,8 @@ app.get('/api/events/json',(req, res)=>{
 app.get('/api/chapter/:id', (req, res)=>{
   Event.findAll({where: {videoHash: req.params.id}}).then((events, err)=>{
     if(err){console.log(err)}
+    events.sort(orderMoves)
+    console.log(events.length)
     res.json(events)
   })
 })
