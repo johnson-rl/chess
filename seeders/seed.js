@@ -94,11 +94,11 @@ let mappedMoves = moves.map((move)=>{
   }
 
   let chessMove
-  if (move.move != 'start' || 'end' || 'reset'){
+  if (move.move != 'start' && move.move != 'end' && move.move != 'reset'){
     chessMove = chess.move(move.move);
     if (!chessMove){
       let currentFen = chess.fen()
-      console.log(currentFen)
+      console.log(filename, currentFen)
       let index = currentFen.indexOf(' ') + 1
       let turn = currentFen[index]
       if (turn === 'w'){
@@ -109,7 +109,7 @@ let mappedMoves = moves.map((move)=>{
       currentFen = currentFen.slice(0, index) + turn + currentFen.slice((index+1))
       chess = new Chess(currentFen)
       chessMove = chess.move(move.move)
-      console.log(currentFen, chessMove)
+      console.log(currentFen, chessMove, move.move)
     }
   }
 
@@ -118,7 +118,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  // console.log('times',timestampData,'file',file)
+  console.log('times',times,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (!(time.length> 0)){
   //   console.log(time)
@@ -165,6 +165,7 @@ function createFens (filename, res) {
 let contents = res.toString().replace(/[\r\n]+/g, '\n\n')
 // parse PGN
 pgnParser((err, parser) => {
+  // console.log(filename, contents)
   const pgn = parser.parse(contents)[0]
 
     // console.log('filename',filename, pgn)
