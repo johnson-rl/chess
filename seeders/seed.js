@@ -144,8 +144,8 @@ let mappedMoves = moves.map((move)=>{
       type: type,
       chessMove: chessMove,
       // timestamp: timestampParse.parse(toParse)
-      // timestamp: calc, // CORRECT data
-      timestamp: timestamp,
+      timestamp: calc, // CORRECT data
+      // timestamp: timestamp,
       videoHash: chapter
     }
     // console.log('data',data)
