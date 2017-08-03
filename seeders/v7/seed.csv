@@ -1,0 +1,803 @@
+Day 1- Position 1 11-26-51 v3-JT,01:00:18:23,.start,3
+Day 1- Position 1 11-26-51 v3-JT,01:00:39:21,.end,3
+Day 1- Position 2 11-27-14 v2-JT,01:00:43:01,.start,3
+Day 1- Position 2 11-27-14 v2-JT,01:01:03:08,.end,3
+Day 1- Position 3 11-27-51 v2-JT,01:01:21:10,.start,3
+Day 1- Position 3 11-27-51 v2-JT,01:01:37:21,1.c5+,3
+Day 1- Position 3 11-27-51 v2-JT,01:01:53:14,.end,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:01:10,.start,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:06:09,1.c5+,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:36:09,1.Kxc5,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:27:20,1.Qxc5,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:30:13,2.Na4+,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:34:02,.reset,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:38:12,2.Ne4+,3
+Day 1- Position 4 11-28-19 v2-JT,01:02:42:11,.end,3
+Day 1- Position 5 11-33-02 v4-JT,01:05:27:21,.start,3
+Day 1- Position 5 11-33-02 v4-JT,01:05:44:12,1.Rb8,3
+Day 1- Position 5 11-33-02 v4-JT,01:05:49:19,2.Rb5,3
+Day 1- Position 5 11-33-02 v4-JT,01:06:15:19,2.Ba2,3
+Day 1- Position 5 11-33-02 v4-JT,01:05:54:10,2.Kg8,3
+Day 1- Position 5 11-33-02 v4-JT,01:05:57:19,3.Rxb1,3
+Day 1- Position 5 11-33-02 v4-JT,01:06:00:08,.reset,3
+Day 1- Position 5 11-33-02 v4-JT,01:06:21:12,3.Rb8+,3
+Day 1- Position 5 11-33-02 v4-JT,01:06:32:23,3.Bg8,3
+Day 1- Position 5 11-33-02 v4-JT,01:06:38:05,.end,3
+Day 1- Position 6 11-35-09 v3-JT,01:07:17:22,.start,3
+Day 1- Position 6 11-35-09 v3-JT,01:07:41:10,4.g6,3
+Day 1- Position 6 11-35-09 v3-JT,01:07:37:09,4.h6,3
+Day 1- Position 6 11-35-09 v3-JT,01:07:40:00,.reset,3
+Day 1- Position 6 11-35-09 v3-JT,01:07:43:00,.end,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:08:01,.start,3
+Day 1- Position 7 11-37-23 v3-JT,01:10:09:10,5.Rh2+,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:40:02,5.Rhh8,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:41:10,.reset,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:42:17,5.Rah8,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:44:00,.reset,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:52:02,5.Qb3#,3
+Day 1- Position 7 11-37-23 v3-JT,01:09:57:13,.reset,3
+Day 1- Position 7 11-37-23 v3-JT,01:10:20:17,5.Kd1,3
+Day 1- Position 7 11-37-23 v3-JT,01:10:27:08,6.Rxa4,3
+Day 1- Position 7 11-37-23 v3-JT,01:10:37:20,6.Qd6+,3
+Day 1- Position 7 11-37-23 v3-JT,01:10:53:18,7.Rb4,3
+Day 1- Position 7 11-37-23 v3-JT,01:11:05:20,7.Qxh2,3
+Day 1- Position 7 11-37-23 v3-JT,01:11:12:20,8.Rb1+,3
+Day 1- Position 7 11-37-23 v3-JT,01:11:15:03,8.Kc2,3
+Day 1- Position 7 11-37-23 v3-JT,01:11:16:21,9.Rb2+,3
+Day 1- Position 7 11-37-23 v3-JT,,9.Kd3,3
+Day 1- Position 7 11-37-23 v3-JT,,10.Rxh2,3
+Day 1- Position 7 11-37-23 v3-JT,01:11:26:12,.end,3
+Day 1- Position 8 11-47-39,01:17:22:00,.start,3
+Day 1- Position 8 11-47-39,01:17:41:00,5.Nc7,3
+Day 1- Position 8 11-47-39,01:17:47:07,5.Rxd1,3
+Day 1- Position 8 11-47-39,01:17:48:15,6.Rxd1,3
+Day 1- Position 8 11-47-39,01:18:13:00,.end,3
+Day 1- Position 9 11-56-50 v2-JT,01:22:21:10,.start,3
+Day 1- Position 9 11-56-50 v2-JT,01:23:21:16,6.c8=R,3
+Day 1- Position 9 11-56-50 v2-JT,01:22:41:07,6.c8=Q,3
+Day 1- Position 9 11-56-50 v2-JT,01:22:51:17,6.Rc4+,3
+Day 1- Position 9 11-56-50 v2-JT,01:23:02:04,7.Qxc4,3
+Day 1- Position 9 11-56-50 v2-JT,01:23:14:00,.reset,3
+Day 1- Position 9 11-56-50 v2-JT,01:23:42:00,6.Ra4,3
+Day 1- Position 9 11-56-50 v2-JT,01:23:52:00,7.Kb3,3
+Day 1- Position 9 11-56-50 v2-JT,01:24:01:07,.end,3
+Day 1- Position 10 11-59-24,01:24:40:19,.start,3
+Day 1- Position 10 11-59-24,01:26:23:14,7.Nb6,3
+Day 1- Position 10 11-59-24,01:25:01:11,7.Bxe3,3
+Day 1- Position 10 11-59-24,01:25:05:10,.reset,3
+Day 1- Position 10 11-59-24,01:25:17:05,7.Ne6,3
+Day 1- Position 10 11-59-24,01:25:19:05,7.Bxf4,3
+Day 1- Position 10 11-59-24,01:25:20:00,8.Nxf4,3
+Day 1- Position 10 11-59-24,01:25:41:09,.reset,3
+Day 1- Position 10 11-59-24,01:27:27:04,7.Kxb6,3
+Day 1- Position 10 11-59-24,01:26:37:01,7.Bxf4,3
+Day 1- Position 10 11-59-24,01:26:40:06,8.Nc4#,3
+Day 1- Position 10 11-59-24,01:27:02:10,.reset,3
+Day 1- Position 10 11-59-24,01:27:07:02,7.Bxb6,3
+Day 1- Position 10 11-59-24,01:27:10:17,8.Bd2#,3
+Day 1- Position 10 11-59-24,01:27:22:10,.reset,3
+Day 1- Position 10 11-59-24,01:27:32:07,8.Nd5+,3
+Day 1- Position 10 11-59-24,01:27:35:18,8.Kc5,3
+Day 1- Position 10 11-59-24,01:27:36:18,9.Nxe3,3
+Day 1- Position 10 11-59-24,01:27:51:06,.end,3
+Day 1- Position 11 12-21-33 v2-JT,01:29:37:02,.start,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:31:20,12.Rh4,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:09:19,12.Ra3+,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:10:20,12.Kxc4,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:12:03,.reset,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:42:05,12.Rxh4,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:44:10,13.Ra3+,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:48:05,13.Kd4,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:49:06,14.Ra4+,3
+Day 1- Position 11 12-21-33 v2-JT,,14.Kd3,3
+Day 1- Position 11 12-21-33 v2-JT,,15.Rxh4,3
+Day 1- Position 11 12-21-33 v2-JT,01:30:56:10,.end,3
+Day 1- Position 12 12-23-02,01:31:14:04,.start,3
+Day 1- Position 12 12-23-02,01:31:59:00,12.O-O-O,3
+Day 1- Position 12 12-23-02,01:31:24:03,12.Rh4,3
+Day 1- Position 12 12-23-02,01:31:28:12,12.Rxh4,3
+Day 1- Position 12 12-23-02,01:31:32:12,13.Ra3+,3
+Day 1- Position 12 12-23-02,01:31:33:14,13.Kf4,3
+Day 1- Position 12 12-23-02,01:31:35:02,14.Ra4+,3
+Day 1- Position 12 12-23-02,01:31:36:05,14.Kg5,3
+Day 1- Position 12 12-23-02,01:31:39:16,.reset,3
+Day 1- Position 12 12-23-02,01:32:23:04,.end,3
+Day 1- Position 13 12-25-04,01:33:01:16,.start,3
+Day 1- Position 13 12-25-04,01:35:18:10,12.Rb6+,3
+Day 1- Position 13 12-25-04,01:33:58:05,12.Ka6,3
+Day 1- Position 13 12-25-04,01:34:03:16,12.Qxh6+,3
+Day 1- Position 13 12-25-04,01:34:06:14,.reset,3
+Day 1- Position 13 12-25-04,01:35:24:09,12.Bxb6,3
+Day 1- Position 13 12-25-04,01:35:28:16,13.Ka6,3
+Day 1- Position 13 12-25-04,01:35:53:12,13.Rd7,3
+Day 1- Position 13 12-25-04,01:35:35:15,13.Kc7,3
+Day 1- Position 13 12-25-04,01:35:37:03,14.Qb7#,3
+Day 1- Position 13 12-25-04,01:35:41:00,.reset,3
+Day 1- Position 13 12-25-04,01:35:48:16,13.Qe7,3
+Day 1- Position 13 12-25-04,01:35:50:08,14.Qxe7,3
+Day 1- Position 13 12-25-04,01:35:51:17,.reset,3
+Day 1- Position 13 12-25-04,01:36:13:17,14.Qa8+,3
+Day 1- Position 13 12-25-04,01:36:24:16,14.Kxa8,3
+Day 1- Position 13 12-25-04,01:36:22:08,14.Kc7,3
+Day 1- Position 13 12-25-04,01:36:23:08,15.Qxf8,3
+Day 1- Position 13 12-25-04,01:36:23:22,.reset,3
+Day 1- Position 13 12-25-04,01:36:30:16,15.Nxb6+,3
+Day 1- Position 13 12-25-04,01:36:34:10,15.Kb8,3
+Day 1- Position 13 12-25-04,01:36:35:16,16.Nxd7+,3
+Day 1- Position 13 12-25-04,01:36:41:08,16.Kc7,3
+Day 1- Position 13 12-25-04,01:36:42:09,17.Nxf8,3
+Day 1- Position 13 12-25-04,01:36:53:15,.end,3
+Day 1- Position 14 12-57-06 v2-JT,01:00:33:07,.start,4
+Day 1- Position 14 12-57-06 v2-JT,01:00:42:00,1.Kd7,4
+Day 1- Position 14 12-57-06 v2-JT,01:00:43:11,2.Rxh6,4
+Day 1- Position 14 12-57-06 v2-JT,01:00:49:08,.end,4
+Day 1- Position 15 12-57-53 v3-JT,01:01:01:19,.start,4
+Day 1- Position 15 12-57-53 v3-JT,01:01:39:19,1.Kd3,4
+Day 1- Position 15 12-57-53 v3-JT,01:01:42:13,2.Ke4,4
+Day 1- Position 15 12-57-53 v3-JT,01:01:47:21,.end,4
+Day 1- Position 16 12-58-08,,.start,4
+Day 1- Position 16 12-58-08,,17.Ke4,4
+Day 1- Position 16 12-58-08,,.end,4
+Day 1- Position 17 12-58-42,01:02:09:11,.start,4
+Day 1- Position 17 12-58-42,01:02:15:06,17.Bc3,4
+Day 1- Position 17 12-58-42,01:02:37:15,.end,4
+Day 1- Position 18 12-59-34,01:02:59:15,.start,4
+Day 1- Position 18 12-59-34,01:03:20:04,17.Bg3,4
+Day 1- Position 18 12-59-34,01:03:05:09,17.Bc3,4
+Day 1- Position 18 12-59-34,01:03:12:07,.reset,4
+Day 1- Position 18 12-59-34,01:03:35:13,.end,4
+Day 1- Position 19 13-00-47 v2-JT,01:04:12:23,.start,4
+Day 1- Position 19 13-00-47 v2-JT,01:04:42:01,17.Ke2,4
+Day 1- Position 19 13-00-47 v2-JT,01:04:55:14,18.Kf2,4
+Day 1- Position 19 13-00-47 v2-JT,01:05:00:10,18.Rh1,4
+Day 1- Position 19 13-00-47 v2-JT,01:05:03:18,19.Rxa2,4
+Day 1- Position 19 13-00-47 v2-JT,01:05:05:16,19.Rh2+,4
+Day 1- Position 19 13-00-47 v2-JT,,20.Kf3,4
+Day 1- Position 19 13-00-47 v2-JT,,20.Rxa2,4
+Day 1- Position 19 13-00-47 v2-JT,01:05:13:15,.end,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:16:06,.start,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:47:16,18.Kf3,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:18:17,18.Kg2,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:38:19,.reset,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:51:12,18.Rf1+,4
+Day 1- Position 20 13-01-45 v2-JT,01:05:56:02,.end,4
+Day 1- Position 21 13-04-04,01:06:04:20,.start,4
+Day 1- Position 21 13-04-04,01:06:31:03,19.Bxe5,4
+Day 1- Position 21 13-04-04,01:06:42:19,20.Nc6,4
+Day 1- Position 21 13-04-04,01:06:50:13,20.Qf6,4
+Day 1- Position 21 13-04-04,01:07:12:08,21.Nxe5,4
+Day 1- Position 21 13-04-04,01:06:59:16,21.Nxb8,4
+Day 1- Position 21 13-04-04,01:07:10:03,.reset,4
+Day 1- Position 21 13-04-04,01:07:32:08,21.Qxe5,4
+Day 1- Position 21 13-04-04,01:07:34:11,22.Bf4,4
+Day 1- Position 21 13-04-04,01:07:49:09,.end,4
+Day 1- Position 22 13-06-52 v2-JT,01:08:30:01,.start,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:04:03,22.Ra8,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:06:21,22.Qxa2,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:21:08,22.Qxa8,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:23:17,23.Bf3+,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:29:05,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:32:03,22.Qe6,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:34:04,23.Ra6+,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:37:03,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:38:04,22.Qd5,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:39:06,23.Bf3,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:46:06,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:47:08,22.Qc4,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:48:01,23.Rc8+,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:51:22,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:54:03,22.Qh7,4
+Day 1- Position 22 13-06-52 v2-JT,01:09:56:08,23.Bg6,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:00:03,23.Qxg6,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:01:05,24.Ra6+,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:03:00,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:13:10,23.Rxa4,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:25:02,23.Qg8,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:16:01,23.Qxa4,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:20:01,24.Be8+,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:22:17,.reset,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:26:10,24.Ra8,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:31:02,24.Qh7,4
+Day 1- Position 22 13-06-52 v2-JT,01:10:32:05,25.Bg6,4
+Day 1- Position 22 13-06-52 v2-JT,,25.Qxg6,4
+Day 1- Position 22 13-06-52 v2-JT,,26.Ra6+,4
+Day 1- Position 22 13-06-52 v2-JT,01:11:12:21,.end,4
+Day 1- Position 23 13-10-28 v3-JT,01:12:01:17,.start,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:31:16,26.Ra5+,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:54:10,26.Ke4,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:45:15,26.Kc6,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:46:20,27.Ba4+,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:49:16,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:51:02,26.Ke6,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:52:04,27.Bg4+,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:54:21,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:56:12,26.Kc4,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:57:07,27.Be2#,4
+Day 1- Position 23 13-10-28 v3-JT,01:13:58:16,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:01:08,26.b5,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:05:21,27.Rxb5,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:09:13,27.Qxb5,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:16:01,28.c4,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:34:19,28.Qxc4,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:28:23,28.Kxc4,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:30:03,29.Be2+,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:32:21,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:35:15,29.Bb3,4
+Day 1- Position 23 13-10-28 v3-JT,01:14:45:20,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:15:26:05,27.Rf5,4
+Day 1- Position 23 13-10-28 v3-JT,01:15:52:09,28.Bc2#,4
+Day 1- Position 23 13-10-28 v3-JT,01:15:55:03,29.Bd1,4
+Day 1- Position 23 13-10-28 v3-JT,01:16:03:06,29.Qxf5,4
+Day 1- Position 23 13-10-28 v3-JT,01:15:56:23,29.Kxf5,4
+Day 1- Position 23 13-10-28 v3-JT,01:15:58:10,30.Bg4+,4
+Day 1- Position 23 13-10-28 v3-JT,01:16:01:15,.reset,4
+Day 1- Position 23 13-10-28 v3-JT,01:16:05:22,30.Bc2+,4
+Day 1- Position 23 13-10-28 v3-JT,01:16:08:18,.end,4
+Day 2- Position 24 10-45-18,01:00:22:21,.start,5
+Day 2- Position 24 10-45-18,01:00:38:02,9.e5,5
+Day 2- Position 24 10-45-18,01:00:42:23,.end,5
+Day 2- Position 25 10-45-34,01:00:50:17,.start,5
+Day 2- Position 25 10-45-34,01:00:54:19,9.e5+,5
+Day 2- Position 25 10-45-34,01:01:03:15,.end,5
+Day 2- Position 26 10-45-51,01:01:07:20,.start,5
+Day 2- Position 26 10-45-51,01:01:10:10,9.e5+,5
+Day 2- Position 26 10-45-51,01:01:16:15,9.Rxf3+,5
+Day 2- Position 26 10-45-51,01:01:20:20,.end,5
+Day 2- Position 27 10-47-00 v4-JT,01:01:58:09,.start,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:24:05,1.a4,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:26:13,2.Bc2,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:35:19,2.bxc3,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:32:00,2.b3,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:34:05,.reset,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:36:23,3.e5+,5
+Day 2- Position 27 10-47-00 v4-JT,01:02:46:19,.end,5
+Day 2- Position 28 10-49-37 v2-JT,01:03:53:11,.start,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:17:20,28.Qd8,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:00:10,28.hxg6,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:02:00,29.Qxg6+,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:04:01,.reset,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:13:23,28.Bf7,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:14:09,29.Ne7+,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:15:10,.reset,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:29:15,29.Ne7+,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:43:14,29.Kf7,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:47:12,30.Qh5+,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:49:18,30.Kxe7,5
+Day 2- Position 28 10-49-37 v2-JT,01:04:51:05,31.Bg5+,5
+Day 2- Position 28 10-49-37 v2-JT,01:05:16:23,.end,5
+Day 2- Position 29 10-52-04 v2-JT,01:05:25:09,.start,5
+Day 2- Position 29 10-52-04 v2-JT,01:06:31:04,31.h5,5
+Day 2- Position 29 10-52-04 v2-JT,01:05:42:20,31.Qh6+,5
+Day 2- Position 29 10-52-04 v2-JT,01:05:45:04,32.Rh5,5
+Day 2- Position 29 10-52-04 v2-JT,01:05:52:00,.reset,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:09:10,32.gxh5,5
+Day 2- Position 29 10-52-04 v2-JT,01:06:49:14,32.Rxg5,5
+Day 2- Position 29 10-52-04 v2-JT,01:06:51:04,32.hxg4+,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:00:11,.reset,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:01:16,32.Qe1+,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:05:03,.reset,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:11:07,32.Qxf5,5
+Day 2- Position 29 10-52-04 v2-JT,01:07:23:08,.end,5
+Day 2- Position 30 10-55-32,01:08:13:12,.start,5
+Day 2- Position 30 10-55-32,01:09:06:19,32.Rcd8,5
+Day 2- Position 30 10-55-32,01:08:41:14,32.Rdc7,5
+Day 2- Position 30 10-55-32,01:08:43:05,.reset,5
+Day 2- Position 30 10-55-32,01:08:44:15,32.Rdd8,5
+Day 2- Position 30 10-55-32,01:08:45:20,.reset,5
+Day 2- Position 30 10-55-32,01:09:18:01,33.Qxd7,5
+Day 2- Position 30 10-55-32,01:09:21:13,33.Rxd7,5
+Day 2- Position 30 10-55-32,01:09:23:14,34.Re8+,5
+Day 2- Position 30 10-55-32,01:09:24:22,34.Kh7,5
+Day 2- Position 30 10-55-32,01:09:25:22,35.Be4+,5
+Day 2- Position 30 10-55-32,01:09:28:23,35.g6,5
+Day 2- Position 30 10-55-32,01:09:30:17,36.Rxd7,5
+Day 2- Position 30 10-55-32,01:09:52:20,.end,5
+Day 2- Position 31 10-58-03 v2-JT,01:10:20:04,.start,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:07:15,31.Bf6,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:14:01,31.Qxh5,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:16:13,32.Rxg7+,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:18:23,32.Kh8,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:21:02,33.Rxf7+,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:23:11,33.Kg8,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:24:10,34.Rg7+,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:27:00,34.Kh8,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:28:00,35.Rxb7+,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:30:23,35.Kg8,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:32:08,36.Rg7+,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:33:12,36.Kh8,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:34:12,37.Rg5+,5
+Day 2- Position 31 10-58-03 v2-JT,,37.Kh7,5
+Day 2- Position 31 10-58-03 v2-JT,,38.Rxh5,5
+Day 2- Position 31 10-58-03 v2-JT,01:11:41:17,.end,5
+Day 2- Position 32 11-00-56 v2-JT,01:11:47:18,.start,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:08:03,38.Qe1+,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:22:09,38.Kg2,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:12:15,38.Kh2,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:13:16,39.Bf3,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:19:18,40.Qh1#,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:21:10,.reset,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:26:10,39.Bh3+,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:40:08,39.Kxh3,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:32:09,39.Kf3,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:34:22,40.Qe3#,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:36:06,.reset,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:37:01,39.Kh2,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:37:23,40.Qe5+,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:46:00,40.Kxh3,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:41:10,41.Qg3#,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:43:10,.reset,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:49:05,40.Qg1,5
+Day 2- Position 32 11-00-56 v2-JT,01:13:56:21,40.Kh4,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:06:15,41.Qh2+,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:33:20,41.Kg5,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:26:14,41.Kg4,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:29:17,42.f3+,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:32:23,.reset,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:35:14,42.f4+,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:40:18,43.Qxa2,5
+Day 2- Position 32 11-00-56 v2-JT,,42.f3+,5
+Day 2- Position 32 11-00-56 v2-JT,,42.Kxf3,5
+Day 2- Position 32 11-00-56 v2-JT,,43.Qxa2,5
+Day 2- Position 32 11-00-56 v2-JT,01:14:42:13,.end,5
+Pins - Position 1 0037,01:00:23:19,.start,6
+Pins - Position 1 0037,01:00:47:14,.end,6
+Pins - Position 2 0057,01:00:51:09,.start,6
+Pins - Position 2 0057,01:01:06:09,.end,6
+Pins - Position 3 0125,01:01:15:06,.start,6
+Pins - Position 3 0125,01:01:29:21,1.Rxg5,6
+Pins - Position 3 0125,01:01:31:19,2.c8=Q,6
+Pins - Position 3 0125,01:01:36:13,.end,6
+Pins - Position 4 0212,01:02:05:10,.start,6
+Pins - Position 4 0212,01:02:39:22,.end,6
+Pins - Position 5 0302 v2-JT,01:02:59:23,.start,6
+Pins - Position 5 0302 v2-JT,01:03:25:22,1.Rg8+,6
+Pins - Position 5 0302 v2-JT,01:03:27:19,1.Kc7,6
+Pins - Position 5 0302 v2-JT,01:03:28:18,2.Rg7,6
+Pins - Position 5 0302 v2-JT,01:03:38:18,2.Ng5,6
+Pins - Position 5 0302 v2-JT,01:03:41:16,3.Bc4,6
+Pins - Position 5 0302 v2-JT,01:03:52:02,3.Rd7,6
+Pins - Position 5 0302 v2-JT,01:03:57:03,4.Bb5,6
+Pins - Position 5 0302 v2-JT,01:04:01:01,4.Rf7,6
+Pins - Position 5 0302 v2-JT,01:04:04:19,5.Be8,6
+Pins - Position 5 0302 v2-JT,01:04:11:20,5.Rxg7,6
+Pins - Position 5 0302 v2-JT,01:04:13:02,6.hxg7,6
+Pins - Position 5 0302 v2-JT,,6.Kd6,6
+Pins - Position 5 0302 v2-JT,01:04:17:01,7.g8=Q,6
+Pins - Position 5 0302 v2-JT,01:04:19:18,.end,6
+Pins - Position 5.5 0500,01:04:26:22,.start,6
+Pins - Position 5.5 0500,01:04:27:17,2.Nd6,6
+Pins - Position 5.5 0500,01:04:31:05,3.Bc4,6
+Pins - Position 5.5 0500,01:04:39:00,3.Rd7,6
+Pins - Position 5.5 0500,01:04:40:00,4.Be6,6
+Pins - Position 5.5 0500,01:05:00:22,.end,6
+Pins - Position 6 0613 v2-JT,01:06:08:05,.start,6
+Pins - Position 6 0613 v2-JT,01:06:17:13,1.Re6,6
+Pins - Position 6 0613 v2-JT,01:06:20:19,1.Rxe6,6
+Pins - Position 6 0613 v2-JT,01:06:21:18,2.Kxe6,6
+Pins - Position 6 0613 v2-JT,,2.Kg2,6
+Pins - Position 6 0613 v2-JT,,3.Rxe2+,6
+Pins - Position 6 0613 v2-JT,01:06:39:11,.end,6
+Pins - Position 7 0713 v2-JT,01:07:06:12,.start,6
+Pins - Position 7 0713 v2-JT,01:07:52:18,1.Re2+,6
+Pins - Position 7 0713 v2-JT,01:07:32:03,1.Rf3,6
+Pins - Position 7 0713 v2-JT,01:07:35:08,1.Ke4,6
+Pins - Position 7 0713 v2-JT,01:07:48:09,.reset,6
+Pins - Position 7 0713 v2-JT,01:08:05:03,1.Kf5,6
+Pins - Position 7 0713 v2-JT,01:07:56:06,1.Kd4,6
+Pins - Position 7 0713 v2-JT,01:07:57:15,2.Nc2+,6
+Pins - Position 7 0713 v2-JT,01:08:04:09,.reset,6
+Pins - Position 7 0713 v2-JT,01:08:06:01,2.Re3,6
+Pins - Position 7 0713 v2-JT,01:08:15:07,.end,6
+Pins - Position 8 0913,01:08:54:12,.start,6
+Pins - Position 8 0913,01:10:39:19,1.Qa2,6
+Pins - Position 8 0913,01:09:35:17,1.c6,6
+Pins - Position 8 0913,01:09:39:16,1.Bxc6,6
+Pins - Position 8 0913,01:09:41:01,2.Be3,6
+Pins - Position 8 0913,01:09:47:12,2.Rb4,6
+Pins - Position 8 0913,01:10:00:03,.reset,6
+Pins - Position 8 0913,01:10:47:19,1.Rxa2,6
+Pins - Position 8 0913,01:10:53:00,2.Bxc4+,6
+Pins - Position 8 0913,01:10:56:03,2.Kf8,6
+Pins - Position 8 0913,01:10:56:14,3.Bxa2,6
+Pins - Position 8 0913,01:11:00:02,.end,6
+Pins - Position 9 1220,01:12:10:13,.start,6
+Pins - Position 9 1220,01:13:48:20,1.Qb8,6
+Pins - Position 9 1220,01:14:07:00,1.Qe7,6
+Pins - Position 9 1220,01:14:09:20,2.Rxg7+,6
+Pins - Position 9 1220,01:14:11:18,2.Qxg7,6
+Pins - Position 9 1220,01:14:41:05,3.Qxc7,6
+Pins - Position 9 1220,01:14:13:17,3.Rxg7+,6
+Pins - Position 9 1220,01:14:23:10,.reset,6
+Pins - Position 9 1220,01:14:44:18,.end,6
+Day 2- Position 33 11-48-09,01:00:11:10,.start,7
+Day 2- Position 33 11-48-09,01:00:36:00,43.Bf6+,7
+Day 2- Position 33 11-48-09,01:00:23:13,43.Re8,7
+Day 2- Position 33 11-48-09,01:00:25:04,43.Kf7,7
+Day 2- Position 33 11-48-09,01:00:28:01,.reset,7
+Day 2- Position 33 11-48-09,01:00:45:18,43.Kxf6,7
+Day 2- Position 33 11-48-09,01:00:48:03,44.Rh6+,7
+Day 2- Position 33 11-48-09,01:00:56:10,.end,7
+Day 2- Position 34 11-49-45,01:01:22:16,.start,7
+Day 2- Position 34 11-49-45,01:01:34:13,44.Qd4+,7
+Day 2- Position 34 11-49-45,01:01:36:02,45.Kh1,7
+Day 2- Position 34 11-49-45,01:01:44:08,45.Qf2,7
+Day 2- Position 34 11-49-45,01:02:03:16,46.Qb5,7
+Day 2- Position 34 11-49-45,01:01:57:04,46.Rxf2,7
+Day 2- Position 34 11-49-45,01:01:58:09,46.Re1+,7
+Day 2- Position 34 11-49-45,01:02:00:16,.reset,7
+Day 2- Position 34 11-49-45,01:02:06:07,46.Re1,7
+Day 2- Position 34 11-49-45,01:02:14:10,.end,7
+Day 2- Position 35 11-52-15,01:02:52:21,.start,7
+Day 2- Position 35 11-52-15,01:03:28:13,44.Qd5+,7
+Day 2- Position 35 11-52-15,01:03:32:10,44.Qxd5,7
+Day 2- Position 35 11-52-15,01:03:36:06,45.g8=Q+,7
+Day 2- Position 35 11-52-15,01:03:46:23,45.Ke7,7
+Day 2- Position 35 11-52-15,01:03:48:20,46.Qxd5,7
+Day 2- Position 35 11-52-15,01:03:50:21,.start,7
+Day 2- Position 36 11-53-59,01:03:58:11,.start,7
+Day 2- Position 36 11-53-59,01:04:33:06,46.Qa3+,7
+Day 2- Position 36 11-53-59,01:04:42:07,46.Kxa3,7
+Day 2- Position 36 11-53-59,01:04:49:19,47.Nc2#,7
+Day 2- Position 36 11-53-59,01:05:10:21,.end,7
+Day 2- Position 37 12-04-06 v2-JT,01:05:19:09,.start,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:50:02,47.Rg3,7
+Day 2- Position 37 12-04-06 v2-JT,01:05:49:10,47.Qe3+,7
+Day 2- Position 37 12-04-06 v2-JT,01:05:57:12,48.Be2,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:00:03,.reset,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:08:03,47.Bh4+,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:16:01,48.Ke2,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:11:04,48.Qxh4,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:12:13,48.Qe3+,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:15:03,.reset,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:21:00,.reset,7
+Day 2- Position 37 12-04-06 v2-JT,,48.Qe3+,7
+Day 2- Position 37 12-04-06 v2-JT,,49.Be2,7
+Day 2- Position 37 12-04-06 v2-JT,,49.Qxe2#,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:07:01,48.Qxg3,7
+Day 2- Position 37 12-04-06 v2-JT,01:06:58:15,48.hxg3,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:03:10,48.Qe3+,7
+Day 2- Position 37 12-04-06 v2-JT,,49.Be2,7
+Day 2- Position 37 12-04-06 v2-JT,,49.Qxe2#,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:06:09,.reset,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:08:23,48.Bh4,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:16:08,49.Qxh4,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:18:05,49.Qe3#,7
+Day 2- Position 37 12-04-06 v2-JT,,50.Be2,7
+Day 2- Position 37 12-04-06 v2-JT,,50.Qxe2#,7
+Day 2- Position 37 12-04-06 v2-JT,01:07:21:07,.end,7
+Day 2- Position 37.5 12-04-06 v2-JT,01:07:24:08,.start,7
+Day 2- Position 37.5 12-04-06 v2-JT,01:07:39:20,47.Rg3,7
+Day 2- Position 37.5 12-04-06 v2-JT,01:07:42:16,48.Qxg3,7
+Day 2- Position 37.5 12-04-06 v2-JT,01:07:46:22,48.Bh4,7
+Day 2- Position 37.5 12-04-06 v2-JT,01:07:53:12,.end,7
+Day 2- Position 38 12-07-54 v2-JT,01:08:22:04,.start,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:14:05,49.d6+,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:03:14,49.Nf5+,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:05:19,49.Kf6,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:08:07,.reset,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:05:02,49.Ke6,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:40:15,49.Qxd6,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:42:15,50.Nf5+,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:48:04,.reset,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:53:22,49.Kxd6,7
+Day 2- Position 38 12-07-54 v2-JT,01:09:55:23,50.Nxf7+,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:00:11,.reset,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:09:15,50.Re8+,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:12:11,50.Kd5,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:13:10,51.Rxe5+,7
+Day 2- Position 38 12-07-54 v2-JT,01:10:21:13,.end,7
+Day 2- Position 39 12-11-43 v3-JT,01:11:22:02,.start,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:49:17,51.e5,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:08:02,51.e5,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:21:21,51.Qxe5,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:23:16,52.Bxf7+,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:29:01,52.Rxf7,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:30:10,53.Rd8+,7
+Day 2- Position 39 12-11-43 v3-JT,,54.Qxf7,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:37:10,.reset,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:51:09,51.Qf5,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:55:04,52.Bxf4,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:56:08,52.Qxf4,7
+Day 2- Position 39 12-11-43 v3-JT,01:12:58:18,53.e6,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:11:04,53.Rd8,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:05:18,53.fxe6,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:07:00,54.Bxe6+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:09:04,.reset,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:17:09,54.e7,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:19:16,54.Re8,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:20:20,55.Rf3,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:25:19,55.Qc1+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:27:20,56.Kh2,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:29:05,56.Rxe7,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:31:20,57.Bxf7+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:33:05,57.Kh7,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:39:20,58.Bxg6+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:57:20,58.Kh6,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:45:16,58.Kxg6,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:46:17,59.Qd3+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:48:23,59.Kh6,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:50:06,60.Qd6+,7
+Day 2- Position 39 12-11-43 v3-JT,01:13:55:13,.reset,7
+Day 2- Position 39 12-11-43 v3-JT,01:14:06:18,.end,7
+Day 2- Position 40 12-16-34,01:14:30:06,.start,7
+Day 2- Position 40 12-16-34,01:14:56:06,59.a5,7
+Day 2- Position 40 12-16-34,01:15:08:04,59.Bf8,7
+Day 2- Position 40 12-16-34,01:15:24:02,60.Kd5,7
+Day 2- Position 40 12-16-34,01:15:10:22,60.a6,7
+Day 2- Position 40 12-16-34,01:15:11:23,60.Bc5,7
+Day 2- Position 40 12-16-34,01:15:21:11,.reset,7
+Day 2- Position 40 12-16-34,01:15:39:14,60.Bh6,7
+Day 2- Position 40 12-16-34,01:16:15:10,61.g5+,7
+Day 2- Position 40 12-16-34,01:16:26:18,61.Bxg5,7
+Day 2- Position 40 12-16-34,01:16:18:23,61.Kxg5,7
+Day 2- Position 40 12-16-34,01:16:22:14,62.a6,7
+Day 2- Position 40 12-16-34,01:16:26:01,.reset,7
+Day 2- Position 40 12-16-34,01:16:33:00,62.Ke4,7
+Day 2- Position 40 12-16-34,01:16:46:19,62.Bh4,7
+Day 2- Position 40 12-16-34,01:16:49:02,63.Kf3,7
+Day 2- Position 40 12-16-34,01:17:25:21,.end,7
+Day 2- Position 41 12-22-03,01:19:10:11,.start,7
+Day 2- Position 41 12-22-03,01:20:46:09,63.Qg5,7
+Day 2- Position 41 12-22-03,01:19:49:06,63.Ka6,7
+Day 2- Position 41 12-22-03,01:19:53:19,63.Qe2+,7
+Day 2- Position 41 12-22-03,01:19:59:08,.reset,7
+Day 2- Position 41 12-22-03,01:20:51:21,63.Qxg5+,7
+Day 2- Position 41 12-22-03,01:20:53:12,64.Ka6,7
+Day 2- Position 41 12-22-03,01:21:36:16,64.Bxa7,7
+Day 2- Position 41 12-22-03,01:21:47:03,65.c7,7
+Day 2- Position 41 12-22-03,01:22:09:20,.end,7
+Day 2- Position 42 12-25-03,01:22:16:03,.start,7
+Day 2- Position 42 12-25-03,01:22:25:08,65.Qa5+,7
+Day 2- Position 42 12-25-03,01:22:29:12,66.Kxa5,7
+Day 2- Position 42 12-25-03,01:22:33:21,66.Bxb6+,7
+Day 2- Position 42 12-25-03,01:22:35:16,67.Kxb6,7
+Day 2- Position 42.5 12-26-00 v2-JT,01:22:49:09,.start,7
+Day 2- Position 42.5 12-26-00 v2-JT,01:23:08:06,.end,7
+Day 2- Position 43 13-06-19 v2-JT,01:00:35:13,.start,8
+Day 2- Position 43 13-06-19 v2-JT,01:00:57:18,67.g3,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:19:08,67.Rhg4,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:11:02,67.Kxf2,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:12:12,68.gxh4,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:13:08,68.Rxh4,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:15:05,.reset,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:25:14,68.f4,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:54:20,68.Rxg3,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:40:08,68.Kf3,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:45:18,69.Ra3+,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:51:23,.reset,8
+Day 2- Position 43 13-06-19 v2-JT,01:01:56:03,69.Kxe4,8
+Day 2- Position 43 13-06-19 v2-JT,01:02:00:13,.end,8
+Day 2- Position 44 13-08-46 v2-JT,01:02:40:14,.start,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:11:03,69.Re7,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:35:13,69.Qxe7,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:24:02,69.Bxe7,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:25:18,70.Qf7#,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:33:02,.reset,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:38:10,70.Qd5+,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:42:23,70.Qf7,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:44:10,71.Qxf7#,8
+Day 2- Position 44 13-08-46 v2-JT,01:03:51:15,.end,8
+Day 2- Position 45 13-10-47 v2-JT,01:04:20:00,.start,8
+Day 2- Position 45 13-10-47 v2-JT,01:04:48:00,69.f6,8
+Day 2- Position 45 13-10-47 v2-JT,01:05:00:16,69.gxf6,8
+Day 2- Position 45 13-10-47 v2-JT,01:05:02:00,70.Qe7+,8
+Day 2- Position 45 13-10-47 v2-JT,,70.Kg8,8
+Day 2- Position 45 13-10-47 v2-JT,,71.Qxd8+,8
+Day 2- Position 45 13-10-47 v2-JT,01:05:06:11,.end,8
+Day 2- Position 46 13-12-45,01:05:27:11,.start,8
+Day 2- Position 46 13-12-45,01:06:20:17,71.Rf6,8
+Day 2- Position 46 13-12-45,01:06:02:01,71.e5,8
+Day 2- Position 46 13-12-45,01:06:07:13,71.f5,8
+Day 2- Position 46 13-12-45,01:06:13:09,.reset,8
+Day 2- Position 46 13-12-45,01:06:43:09,71.Kg8,8
+Day 2- Position 46 13-12-45,01:06:26:14,71.Bxf6,8
+Day 2- Position 46 13-12-45,01:06:27:13,72.e5,8
+Day 2- Position 46 13-12-45,01:06:38:06,.reset,8
+Day 2- Position 46 13-12-45,01:06:44:20,72.e5,8
+Day 2- Position 46 13-12-45,01:06:46:00,72.h6,8
+Day 2- Position 46 13-12-45,01:06:47:22,73.Ne2,8
+Day 2- Position 46 13-12-45,01:07:02:13,.end,8
+Day 2- Position 47 13-16-40 v2-JT,01:07:34:02,.start,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:32:08,71.Ba7,8
+Day 2- Position 47 13-16-40 v2-JT,01:07:52:06,71.e8=Q,8
+Day 2- Position 47 13-16-40 v2-JT,01:07:53:08,71.Rxe3+,8
+Day 2- Position 47 13-16-40 v2-JT,01:07:56:18,.reset,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:02:02,71.Bc5,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:03:11,71.Ra8,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:10:22,.reset,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:31:10,71.Kxa7,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:44:23,71.Rxa7,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:47:21,72.e8=Q,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:53:14,.reset,8
+Day 2- Position 47 13-16-40 v2-JT,01:08:59:15,71.Ra1,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:06:15,72.Kf4,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:13:00,72.Rf1+,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:15:16,73.Bf2,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:19:05,73.Rxf2+,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:20:14,74.Ke3,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:22:20,74.Rf1,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:23:13,75.Ke2,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:28:16,.reset,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:40:06,72.Kd4,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:48:04,72.Ra4+,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:49:05,73.Kd5,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:50:17,73.Ra5+,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:51:15,74.Kd6,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:52:19,74.Ra6+,8
+Day 2- Position 47 13-16-40 v2-JT,01:09:53:19,75.Kd7,8
+Day 2- Position 47 13-16-40 v2-JT,01:10:09:00,.end,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:33:23,.start,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:50:20,75.Ne3,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:43:03,75.g8=Q,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:46:05,75.Rg3+,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:48:16,76.Qxg3+,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:49:17,76.Kxg3,8
+Day 2- Position 48 13-21-57 v2-JT,01:10:52:23,.reset,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:32:17,75.Ne3,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:41:01,.reset,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:42:01,75.Ne4,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:43:16,75.Rd8,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:48:21,.reset,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:55:06,75.Rxe3,8
+Day 2- Position 48 13-21-57 v2-JT,01:11:58:14,76.Ne4,8
+Day 2- Position 48 13-21-57 v2-JT,01:12:22:23,.end,8
+Day 2- Position 49 13-31-45,01:00:18:01,.start,9
+Day 2- Position 49 13-31-45,01:00:34:18,76.Bxc6,9
+Day 2- Position 49 13-31-45,01:00:40:08,76.Rxc6,9
+Day 2- Position 49 13-31-45,01:00:46:03,77.Re8#,9
+Day 2- Position 49 13-31-45,01:00:49:20,.end,9
+Day 2- Position 50 13-33-18,01:01:41:14,.start,9
+Day 2- Position 50 13-33-18,01:02:45:07,77.Qf3,9
+Day 2- Position 50 13-33-18,01:02:53:09,78.Qxf3,9
+Day 2- Position 50 13-33-18,01:02:55:01,78.Ra1+,9
+Day 2- Position 50 13-33-18,01:03:00:19,.end,9
+Day 2- Position 54 15-22-07 v2-JT,01:03:06:21,.start,9
+Day 2- Position 54 15-22-07 v2-JT,01:03:42:01,78.Qe7,9
+Day 2- Position 54 15-22-07 v2-JT,01:03:51:03,78.Qxe1+,9
+Day 2- Position 54 15-22-07 v2-JT,01:03:53:18,79.Kh2,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:17:19,79.Rxf3,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:02:23,79.Rxe7,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:05:15,80.Rf8#,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:07:17,.reset,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:08:19,79.Rc7,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:11:10,80.Qf8+,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:13:03,80.Rxf8,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:13:13,81.Rxf8#,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:15:00,.reset,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:22:02,80.Qg7#,9
+Day 2- Position 54 15-22-07 v2-JT,01:04:24:13,.end,9
+Day 2- Position 52 13-38-48 v2-JT,01:04:30:16,.start,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:07:02,78.Be4,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:31:01,79.Rxd2,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:25:18,79.Bxe4,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:27:01,79.Rxe2+,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:28:20,.reset,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:33:07,79.exd2,9
+Day 2- Position 52 13-38-48 v2-JT,01:05:49:01,.end,9
+Day 2- Position 53 13-43-21 v2-JT,01:06:04:00,.start,9
+Day 2- Position 53 13-43-21 v2-JT,01:07:36:17,80.Re8,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:39:11,80.Qh2+,9
+Day 2- Position 53 13-43-21 v2-JT,01:07:49:04,80.Qxb6,9
+Day 2- Position 53 13-43-21 v2-JT,01:07:52:09,81.axb6+,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:00:14,.reset,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:13:00,80.d4,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:13:06,81.Qa7#,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:26:00,.reset,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:29:16,80.Rxe8,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:33:07,81.Qxh6,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:34:13,.reset,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:44:03,81.Kf1,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:20:03,81.Qxg2+,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:50:01,81.Rxe8,9
+Day 2- Position 53 13-43-21 v2-JT,01:08:54:10,82.a6,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:08:06,82.Bc8,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:09:14,83.Qc6+,9
+Day 2- Position 53 13-43-21 v2-JT,,83.Bb7,9
+Day 2- Position 53 13-43-21 v2-JT,,84.axb7#,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:13:19,.reset,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:24:00,82.Kxg2,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:25:04,82.d4+,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:39:01,83.Qxb7+,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:33:01,83.f3,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:34:08,83.Rxe8,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:37:15,.reset,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:42:06,83.Rxb7,9
+Day 2- Position 53 13-43-21 v2-JT,01:09:43:14,84.Rxh8,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:06:03,84.Rxb5,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:07:21,85.a6,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:14:13,85.Ka7,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:16:09,86.Rf8,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:21:17,86.Rxb2,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:24:01,87.Rxf7+,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:25:11,87.Ka8,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:27:12,88.a7,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:28:12,88.c3,9
+Day 2- Position 53 13-43-21 v2-JT,01:10:32:19,89.Rf8,9
+Day 2- Position 53 13-43-21 v2-JT,01:11:02:04,.end,9
+Day 2- Position 55 15-25-18,01:00:34:01,.start,10
+Day 2- Position 55 15-25-18,01:01:01:22,1.Rg8+,10
+Day 2- Position 55 15-25-18,01:01:04:13,1.Kb7,10
+Day 2- Position 55 15-25-18,01:01:06:07,2.Rg7,10
+Day 2- Position 55 15-25-18,01:01:17:15,2.Rxg7,10
+Day 2- Position 55 15-25-18,01:01:18:07,3.hxg7,10
+Day 2- Position 55 15-25-18,01:01:22:14,.end,10
+Day 2- Position 56 15-26-46 v2-JT,01:01:41:21,.start,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:15:09,1.Re1,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:31:02,1.Qd3,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:20:20,1.Nc3,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:23:19,2.Qc6,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:27:12,2.Qc4,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:28:03,3.Qxc7,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:29:23,.reset,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:34:07,2.Rxe8+,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:36:03,2.Rxe8,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:39:20,3.Rd1,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:44:00,3.Qe2,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:46:15,4.Re1,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:48:21,4.Nc3,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:50:17,5.Qxe8,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:58:04,5.Qxe8,10
+Day 2- Position 56 15-26-46 v2-JT,01:02:58:15,6.Rxe8#,10
+Day 2- Position 56 15-26-46 v2-JT,01:03:15:00,.end,10
+Day 2- Position 57 15-29-34 v2-JT,01:04:07:17,.start,10
+Day 2- Position 57 15-29-34 v2-JT,01:04:58:09,3.a3,10
+Day 2- Position 57 15-29-34 v2-JT,01:04:34:09,3.Ke2,10
+Day 2- Position 57 15-29-34 v2-JT,01:04:35:13,3.Kxa2,10
+Day 2- Position 57 15-29-34 v2-JT,01:04:42:08,.reset,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:04:10,3.Rxf1+,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:06:10,4.Ke2,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:30:05,4.Rf4,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:13:15,4.Rh1,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:16:02,5.Rd1+,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:17:11,5.Rxd1,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:18:01,6.Kxd1,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:25:03,.reset,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:46:11,5.Rb3+,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:54:13,5.Kc2,10
+Day 2- Position 57 15-29-34 v2-JT,01:05:56:12,6.Rb4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:09:14,Rg4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:04:23,Rxb4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:05:14,axb4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:07:21,.reset,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:10:10,Rxg4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:11:04,fxg4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:12:03,a4,10
+Day 2- Position 57 15-29-34 v2-JT,,Rxe4,10
+Day 2- Position 57 15-29-34 v2-JT,,fxe4,10
+Day 2- Position 57 15-29-34 v2-JT,,a4,10
+Day 2- Position 57 15-29-34 v2-JT,01:06:14:10,.end,10
+Day 2- Position 58 15-33-34,01:06:32:18,.start,10
+Day 2- Position 58 15-33-34,01:07:04:13,8.Qa4+,10
+Day 2- Position 58 15-33-34,01:07:16:00,8.Kb1,10
+Day 2- Position 58 15-33-34,01:07:17:02,9.Qb3+,10
+Day 2- Position 58 15-33-34,01:07:18:08,9.Kc1,10
+Day 2- Position 58 15-33-34,01:07:19:15,10.Qb2+,10
+Day 2- Position 58 15-33-34,01:07:21:01,10.Kd1,10
+Day 2- Position 58 15-33-34,01:07:22:11,11.Qb1+,10
+Day 2- Position 58 15-33-34,01:07:24:14,11.Ke2,10
+Day 2- Position 58 15-33-34,01:07:36:13,12.Qb7,10
+Day 2- Position 58 15-33-34,01:07:45:22,12.Qxb7,10
+Day 2- Position 58 15-33-34,01:07:48:07,13.cxb7,10
+Day 2- Position 58 15-33-34,01:07:55:21,.end,10
+Day 2- Position 59 15-36-27 v2-JT,01:08:24:14,.start,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:11:09,13.Rb1,10
+Day 2- Position 59 15-36-27 v2-JT,01:08:59:07,13.Rb5+,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:01:23,13.Kd4,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:09:10,.reset,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:25:04,13.cxb1=B,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:21:08,13.cxb1=Q,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:24:20,.reset,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:26:22,13.cxb1=R,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:30:00,.reset,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:35:04,13.cxb1=N,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:45:15,14.Nd2,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:02:20,14.Be4,10
+Day 2- Position 59 15-36-27 v2-JT,01:09:55:23,14.Nxd2,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:00:17,.reset,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:06:16,15. Nxe4,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:07:19,15.Kxe4,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:16:12,.reset,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:38:13,14.Nh2,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:45:17,14.Nxh2,10
+Day 2- Position 59 15-36-27 v2-JT,01:10:47:18,15.Kxh2,10
+Day 2- Position 59 15-36-27 v2-JT,01:11:04:03,.end,10

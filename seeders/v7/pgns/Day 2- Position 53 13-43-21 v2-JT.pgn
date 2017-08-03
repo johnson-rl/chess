@@ -1,0 +1,20 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "kb5r/1b1r1p2/1Q5q/PNpp4/2p5/6P1/1P3PB1/R3R1K1 w - - 0 80"]
+
+80.Re8 Qh2+ 
+    ( 80...Qxb6 81.axb6+ )
+    ( 80...d4 81.Qa7# )
+    ( 80...Rxe8 81.Qxh6 )
+81.Kf1 Qxg2+ 
+    ( 81...Rxe8 82.a6 Bc8 83.Qc6+ )
+82.Kxg2 d4+ 83.Qxb7+ 
+    ( 83.f3 Rxe8 )
+83...Rxb7 84.Rxh8 Rxb5 85.a6 Ka7 86.Rf8 Rxb2 87.Rxf7+ Ka8 88.a7 c3 89.Rf8 
+*
+

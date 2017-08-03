@@ -98,7 +98,7 @@ let mappedMoves = moves.map((move)=>{
     chessMove = chess.move(move.move);
     if (!chessMove){
       let currentFen = chess.fen()
-      console.log(filename, currentFen)
+      // console.log(filename, currentFen)
       let index = currentFen.indexOf(' ') + 1
       let turn = currentFen[index]
       if (turn === 'w'){
@@ -109,7 +109,7 @@ let mappedMoves = moves.map((move)=>{
       currentFen = currentFen.slice(0, index) + turn + currentFen.slice((index+1))
       chess = new Chess(currentFen)
       chessMove = chess.move(move.move)
-      console.log(currentFen, chessMove, move.move)
+      // console.log(currentFen, chessMove, move.move)
     }
   }
 
@@ -118,7 +118,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  console.log('times',times,'file',file)
+  // console.log('times',times,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (!(time.length> 0)){
   //   console.log(time)
@@ -134,7 +134,6 @@ let mappedMoves = moves.map((move)=>{
     chapter = time[0].videoHash
     timestamp = time[i].time || ''
   }
-  if (timestamp === null){}
   timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
   let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
 
@@ -145,7 +144,8 @@ let mappedMoves = moves.map((move)=>{
       type: type,
       chessMove: chessMove,
       // timestamp: timestampParse.parse(toParse)
-      timestamp: calc,
+      // timestamp: calc, // CORRECT data
+      timestamp: timestamp,
       videoHash: chapter
     }
     // console.log('data',data)

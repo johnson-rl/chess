@@ -1,0 +1,13 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "8/ppp5/8/PPP5/8/7k/8/7K w - - 0 1"]
+
+1.b6 
+    ( 1. b6 axb6 2.c6 bxc6 3.a6 )
+1...cxb6 2.a6 *
+
