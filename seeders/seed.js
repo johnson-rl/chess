@@ -55,12 +55,14 @@ var lineReader = readline.createInterface({
 lineReader.on('line', function (line) {
   // console.log('line', line)
   let lineArray = line.split(',')
-  if(!timestampData[lineArray[0]]){
-    timestampData[lineArray[0]] = []
+  if(lineArray[1].length !== 0){
+    if(!timestampData[lineArray[0]]){
+      timestampData[lineArray[0]] = []
+    }
+    let data = {move: lineArray[2].split('.')[1], time: lineArray[1], videoHash: lineArray[3]}
+    timestampData[lineArray[0]].push(data)
+    // console.log('timestampData',timestampData)
   }
-  let data = {move: lineArray[2].split('.')[1], time: lineArray[1], videoHash: lineArray[3]}
-  timestampData[lineArray[0]].push(data)
-  // console.log('timestampData',timestampData)
 });
 
 function onError(err){
@@ -119,7 +121,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  // console.log('times',times,'file',file)
+  console.log('times',times,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (!(time.length> 0)){
   //   console.log(time)
@@ -149,7 +151,7 @@ let mappedMoves = moves.map((move)=>{
       // timestamp: timestamp,
       videoHash: chapter
     }
-    console.log('data',data)
+    // console.log('data',data)
     fenArray.push(data)
   }
 
