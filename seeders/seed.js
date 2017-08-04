@@ -37,7 +37,7 @@ fs.readdir(dirname, function(err, filenames) {
 
 let seed = wipeDb = false;
 
-// wipeDb = true // uncomment this line to wipe db before seeding
+wipeDb = true // uncomment this line to wipe db before seeding
 seed = true // uncomment this line to seed the db
 
 if (seed && wipeDb){
