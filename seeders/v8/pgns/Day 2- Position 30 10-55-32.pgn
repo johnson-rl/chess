@@ -1,0 +1,14 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "2r3k1/pb1r1pp1/1pn2q1p/3B4/6Q1/P4NP1/1P3PP1/2BRR1K1 b - - 0 32"]
+
+32...Rcd8 
+    ( 32...Rdc7 )
+    ( 32...Rdd8 )
+33.Qxd7 Rxd7 34.Re8+ Kh7 35.Be4+ g6 36.Rxd7 *
+

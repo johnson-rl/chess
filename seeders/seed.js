@@ -55,12 +55,12 @@ var lineReader = readline.createInterface({
 lineReader.on('line', function (line) {
   // console.log('line', line)
   let lineArray = line.split(',')
-  if(lineArray[1].length !== 0){
-    if(!timestampData[lineArray[0]]){
-      timestampData[lineArray[0]] = []
+  if(lineArray[2].length !== 0){
+    if(!timestampData[lineArray[1]]){
+      timestampData[lineArray[1]] = []
     }
-    let data = {move: lineArray[2].split('.')[1], time: lineArray[1], videoHash: lineArray[3]}
-    timestampData[lineArray[0]].push(data)
+    let data = {move: lineArray[3].split('.')[1] || lineArray[3], time: lineArray[2], videoHash: lineArray[0]}
+    timestampData[lineArray[1]].push(data)
     // console.log('timestampData',timestampData)
   }
 });
@@ -101,7 +101,7 @@ let mappedMoves = moves.map((move)=>{
     chessMove = chess.move(move.move);
     if (!chessMove){
       let currentFen = chess.fen()
-      console.log(filename, currentFen)
+      // console.log(filename, currentFen)
       let index = currentFen.indexOf(' ') + 1
       let turn = currentFen[index]
       if (turn === 'w'){
@@ -110,11 +110,11 @@ let mappedMoves = moves.map((move)=>{
         turn = 'w'
       }
       let remainingFen = currentFen.slice(index+1)
-      remainingFen = remainingFen.replace(/[a-h][1-8]/,'-')
+      remainingFen = remainingFen.replace(/ - [a-h][1-8]/,' - -')
       currentFen = currentFen.slice(0, index) + turn + remainingFen
       chess = new Chess(currentFen)
       chessMove = chess.move(move.move)
-      console.log(currentFen, chessMove, move.move)
+      // console.log(currentFen, chessMove, move.move)
     }
   }
 
@@ -139,6 +139,7 @@ let mappedMoves = moves.map((move)=>{
     chapter = time[0].videoHash
     timestamp = time[i].time || ''
   }
+
   timestampArray = timestamp.split(':').map((str)=>{return parseInt(str)})
   let calc = ((3+(((timestampArray[0]-1)*60)+timestampArray[1])*60 + timestampArray[2])*24 + timestampArray[3])/23.98 * 1000
 
@@ -153,7 +154,7 @@ let mappedMoves = moves.map((move)=>{
       // timestamp: timestamp,
       videoHash: chapter
     }
-    // console.log('data',data)
+    console.log('data',data)
     fenArray.push(data)
   }
 

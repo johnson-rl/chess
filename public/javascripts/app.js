@@ -135,67 +135,67 @@ jQuery(function($) {
     activePgn
 
     let videoList = {
-      3: {
+      103: {
         title: '103_GK_Double Attacks_Board_v7',
         hash: 'eu2yodfadf',
-        chapter: 3
+        chapter: 103
       },
-      4: {
+      104: {
         title: '104_GK_Skewers_Board_v7',
         hash: '8xwnkkqkxc',
-        chapter: 4
+        chapter: 104
       },
-      5: {
+      105: {
         title: '105_GK_DiscoveredAttacks_Board_v7',
         hash: 'vsjsugodzx',
-        chapter: 5
+        chapter: 105
       },
-      6: {
+      106: {
         title: '106_GK_Pins_Board_v7',
         hash: 'vuux3jpt5i',
-        chapter: 6
+        chapter: 106
       },
-      7: {
+      107: {
         title: '107_GK_DeflectionAttraction_Board_v7',
         hash: 'uv3rk57e8r',
-        chapter: 7
+        chapter: 107
       },
-      8: {
+      108: {
         title: '108_GK_Interference_Board_v7',
         hash: 'rkh884dbuh',
-        chapter: 8
+        chapter: 108
       },
-      9: {
+      109: {
         title: '109_GK_Overload_Board_v7',
         hash: 'otunyj55s8',
-        chapter: 9
+        chapter: 109
       },
-      10: {
+      110: {
         title: '110_GK_WinningTrades_Board_v7',
         hash: 'anz4s14b4a',
-        chapter: 10
+        chapter: 110
       },
-      11: {
+      111: {
         title: '111_GK_EndGames_Board_v7',
         hash: 'wc23s0sw6y',
-        chapter: 11
+        chapter: 111
       },
-      12: {
+      112: {
         title: '112_GK_Openings_Board_v7',
         hash: '8g4xna0a0g',
-        chapter: 12
+        chapter: 112
       },
-      14: {
+      114: {
         title: '114_GK_Case Studies_Board_Openings_v4',
         hash: 'fjgr7q5hp4',
-        chapter: 14
+        chapter: 114
       },
-      16: {
+      116: {
         title: '116_GK_Case Studies_EndGames_Board_v6',
         hash: 'pb54t3rwan',
-        chapter: 16
+        chapter: 116
       },
-      22: {
+      122: {
         title: '122_GK_BonusSecretNovelty_Board_v6',
         hash: 'p0c2jxbx2w',
         chapter: 122
@@ -242,7 +242,7 @@ jQuery(function($) {
 
   $.ajax({
     type: 'GET',
-    url: '/api/chapter/3',
+    url: '/api/chapter/103',
     success: (data) => {
       newEvents = data.sort((a, b)=>{return a.timestamp - b.timestamp})
       console.log(newEvents)
