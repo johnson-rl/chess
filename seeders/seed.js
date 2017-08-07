@@ -37,7 +37,7 @@ fs.readdir(dirname, function(err, filenames) {
 
 let seed = wipeDb = false;
 
-// wipeDb = true // uncomment this line to wipe db before seeding
+wipeDb = true // uncomment this line to wipe db before seeding
 seed = true // uncomment this line to seed the db
 
 if (seed && wipeDb){
@@ -101,7 +101,7 @@ let mappedMoves = moves.map((move)=>{
     chessMove = chess.move(move.move);
     if (!chessMove){
       let currentFen = chess.fen()
-      // console.log(filename, currentFen)
+      console.log(filename, currentFen)
       let index = currentFen.indexOf(' ') + 1
       let turn = currentFen[index]
       if (turn === 'w'){
@@ -109,10 +109,12 @@ let mappedMoves = moves.map((move)=>{
       } else {
         turn = 'w'
       }
-      currentFen = currentFen.slice(0, index) + turn + currentFen.slice((index+1))
+      let remainingFen = currentFen.slice(index+1)
+      remainingFen = remainingFen.replace(/[a-h][1-8]/,'-')
+      currentFen = currentFen.slice(0, index) + turn + remainingFen
       chess = new Chess(currentFen)
       chessMove = chess.move(move.move)
-      // console.log(currentFen, chessMove, move.move)
+      console.log(currentFen, chessMove, move.move)
     }
   }
 
@@ -121,7 +123,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  console.log('times',times,'file',file)
+  // console.log('times',times,'file',file)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (!(time.length> 0)){
   //   console.log(time)

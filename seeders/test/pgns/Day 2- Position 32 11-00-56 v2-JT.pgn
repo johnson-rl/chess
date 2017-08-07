@@ -1,0 +1,18 @@
+[Event "?"]
+[Site "?"]
+[Date "????.??.??"]
+[Round "?"]
+[White "?"]
+[Black "?"]
+[Result "*"]
+[FEN "7K/4Q3/b7/8/6B1/2p5/q4P2/7k w - - 0 38"]
+
+38.Qe1+ Kg2
+    ( 38...Kh2 39.Bf3 40.Qh1#)
+39.Bh3+ Kxh3
+    ( 39...Kf3 40.Qe3# )
+    ( 39...Kh2 40.Qe5+ Kxh3 41.Qg3# )
+40.Qg1 Kh4 41.Qh2+ Kg5
+    ( 41...Kg4 42.f3+ )
+42.f4+
+43.Qxa2 *
