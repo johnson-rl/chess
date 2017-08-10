@@ -154,7 +154,7 @@ let mappedMoves = moves.map((move)=>{
       // timestamp: timestamp,
       videoHash: chapter
     }
-    console.log('data',data)
+    // console.log('data',data)
     fenArray.push(data)
   }
 
