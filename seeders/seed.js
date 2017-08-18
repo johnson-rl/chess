@@ -37,7 +37,7 @@ fs.readdir(dirname, function(err, filenames) {
 
 let seed = wipeDb = false;
 
-wipeDb = true // uncomment this line to wipe db before seeding
+// wipeDb = true // uncomment this line to wipe db before seeding
 seed = true // uncomment this line to seed the db
 
 if (seed && wipeDb){
@@ -81,6 +81,7 @@ lineReader.on('close',()=>{
 
 function parseMoveData(fen, moves, type, filename){
 let chess = new Chess(fen)
+console.log('chess', chess, 'fen', fen, 'chessFen', chess.fen())
 let mappedMoves = moves.map((move)=>{
   let fenArray = [];
   if (move.ravs){
@@ -123,7 +124,7 @@ let mappedMoves = moves.map((move)=>{
   fileArray.pop()
   let file = fileArray.join('.')
   let times = timestampData[file]
-  // console.log('times',times,'file',file)
+  // console.log('times',times,'file',file, 'move', move)
   time = times.filter((obj)=>{return obj.move == move.move})
   // if (!(time.length> 0)){
   //   console.log(time)
@@ -146,7 +147,7 @@ let mappedMoves = moves.map((move)=>{
   if(!isNaN(calc)){
     let data =  {
       move: move.move,
-      fen: chess.fen(),
+      fen: fen,
       type: type,
       chessMove: chessMove,
       // timestamp: timestampParse.parse(toParse)
